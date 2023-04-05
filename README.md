@@ -20,10 +20,10 @@ pip install lago-billing
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```python
-import sdk
-from sdk.models import operations, shared
+import lago
+from lago.models import operations, shared
 
-s = sdk.SDK(
+s = lago.Lago(
     security=shared.Security(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),

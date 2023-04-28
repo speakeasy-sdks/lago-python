@@ -14,14 +14,24 @@ from marshmallow import fields
 @dataclasses.dataclass
 class CustomerUsageObject:
     
-    amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})  
-    amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency') }})  
-    charges_usage: list[shared_chargeusageobject.ChargeUsageObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('charges_usage') }})  
-    from_datetime: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('from_datetime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})  
-    issuing_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issuing_date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})  
-    to_datetime: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('to_datetime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})  
-    total_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_amount_cents') }})  
-    total_amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_amount_currency') }})  
-    vat_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vat_amount_cents') }})  
-    vat_amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vat_amount_currency') }})  
+    amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})
+
+    amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency') }})
+
+    charges_usage: list[shared_chargeusageobject.ChargeUsageObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('charges_usage') }})
+
+    from_datetime: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('from_datetime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+
+    issuing_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issuing_date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+
+    to_datetime: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('to_datetime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+
+    total_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_amount_cents') }})
+
+    total_amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_amount_currency') }})
+
+    vat_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vat_amount_cents') }})
+
+    vat_amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vat_amount_currency') }})
+
     

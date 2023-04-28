@@ -16,25 +16,35 @@ from typing import Optional
 class UpdateBillableMetricRequest:
     
     billable_metric_input: shared_billablemetricinput.BillableMetricInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    r"""Update an existing billable metric"""  
+
+    r"""Update an existing billable metric"""
     code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'code', 'style': 'simple', 'explode': False }})
-    r"""Code of the existing billable metric"""  
+
+    r"""Code of the existing billable metric"""
     
 
 @dataclasses.dataclass
 class UpdateBillableMetricResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     api_response_bad_request: Optional[shared_apiresponsebadrequest.APIResponseBadRequest] = dataclasses.field(default=None)
-    r"""Bad Request error"""  
+
+    r"""Bad Request error"""
     api_response_not_found: Optional[shared_apiresponsenotfound.APIResponseNotFound] = dataclasses.field(default=None)
-    r"""Not Found error"""  
+
+    r"""Not Found error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-    r"""Unauthorized error"""  
+
+    r"""Unauthorized error"""
     api_response_unprocessable_entity: Optional[shared_apiresponseunprocessableentity.APIResponseUnprocessableEntity] = dataclasses.field(default=None)
-    r"""Unprocessable entity error"""  
+
+    r"""Unprocessable entity error"""
     billable_metric: Optional[shared_billablemetric.BillableMetric] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

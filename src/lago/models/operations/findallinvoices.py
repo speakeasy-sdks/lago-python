@@ -19,27 +19,38 @@ class FindAllInvoicesStatusEnum(str, Enum):
 class FindAllInvoicesRequest:
     
     external_customer_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_customer_id', 'style': 'form', 'explode': True }})
-    r"""External customer ID"""  
+
+    r"""External customer ID"""
     issuing_date_from: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'issuing_date_from', 'style': 'form', 'explode': True }})
-    r"""Date from"""  
+
+    r"""Date from"""
     issuing_date_to: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'issuing_date_to', 'style': 'form', 'explode': True }})
-    r"""Date to"""  
+
+    r"""Date to"""
     page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    r"""Number of page"""  
+
+    r"""Number of page"""
     per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    r"""Number of records per page"""  
+
+    r"""Number of records per page"""
     status: Optional[FindAllInvoicesStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    r"""Status"""  
+
+    r"""Status"""
     
 
 @dataclasses.dataclass
 class FindAllInvoicesResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-    r"""Unauthorized error"""  
+
+    r"""Unauthorized error"""
     invoices: Optional[shared_invoices.Invoices] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

@@ -16,25 +16,35 @@ from typing import Optional
 class UpdateAddOnRequest:
     
     add_on_input: shared_addoninput.AddOnInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    r"""Update an existing add-on"""  
+
+    r"""Update an existing add-on"""
     code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'code', 'style': 'simple', 'explode': False }})
-    r"""Code of the existing add-on"""  
+
+    r"""Code of the existing add-on"""
     
 
 @dataclasses.dataclass
 class UpdateAddOnResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     add_on: Optional[shared_addon.AddOn] = dataclasses.field(default=None)
-    r"""Successful response"""  
+
+    r"""Successful response"""
     api_response_bad_request: Optional[shared_apiresponsebadrequest.APIResponseBadRequest] = dataclasses.field(default=None)
-    r"""Bad Request error"""  
+
+    r"""Bad Request error"""
     api_response_not_found: Optional[shared_apiresponsenotfound.APIResponseNotFound] = dataclasses.field(default=None)
-    r"""Not Found error"""  
+
+    r"""Not Found error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-    r"""Unauthorized error"""  
+
+    r"""Unauthorized error"""
     api_response_unprocessable_entity: Optional[shared_apiresponseunprocessableentity.APIResponseUnprocessableEntity] = dataclasses.field(default=None)
-    r"""Unprocessable entity error"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Unprocessable entity error"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

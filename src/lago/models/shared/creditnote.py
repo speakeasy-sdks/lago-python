@@ -12,5 +12,6 @@ from lago import utils
 class CreditNote:
     r"""Successful response"""
     
-    credit_note: shared_creditnoteobject.CreditNoteObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_note') }})  
+    credit_note: shared_creditnoteobject.CreditNoteObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_note') }})
+
     

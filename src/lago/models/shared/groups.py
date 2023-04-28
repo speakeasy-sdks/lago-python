@@ -12,5 +12,6 @@ from lago import utils
 class Groups:
     r"""Successful response"""
     
-    groups: list[shared_groupobject.GroupObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groups') }})  
+    groups: list[shared_groupobject.GroupObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groups') }})
+
     

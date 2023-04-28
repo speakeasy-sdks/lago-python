@@ -12,5 +12,6 @@ from lago import utils
 class Organization:
     r"""Successful response"""
     
-    organization: shared_organizationobject.OrganizationObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('organization') }})  
+    organization: shared_organizationobject.OrganizationObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('organization') }})
+
     

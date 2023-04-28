@@ -12,5 +12,6 @@ from lago import utils
 class BillableMetrics:
     r"""Successful response"""
     
-    billable_metrics: list[shared_billablemetricobject.BillableMetricObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billable_metrics') }})  
+    billable_metrics: list[shared_billablemetricobject.BillableMetricObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billable_metrics') }})
+
     

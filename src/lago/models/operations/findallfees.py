@@ -30,49 +30,71 @@ class FindAllFeesPaymentStatusEnum(str, Enum):
 class FindAllFeesRequest:
     
     billable_metric_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'billable_metric_code', 'style': 'form', 'explode': True }})
-    r"""Code of the source billable metric"""  
+
+    r"""Code of the source billable metric"""
     created_at_from: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'created_at_from', 'style': 'form', 'explode': True }})
-    r"""Creation datetime from"""  
+
+    r"""Creation datetime from"""
     created_at_to: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'created_at_to', 'style': 'form', 'explode': True }})
-    r"""Creation date to"""  
+
+    r"""Creation date to"""
     currency: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'currency', 'style': 'form', 'explode': True }})
-    r"""Amount currency"""  
+
+    r"""Amount currency"""
     external_customer_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_customer_id', 'style': 'form', 'explode': True }})
-    r"""External customer ID"""  
+
+    r"""External customer ID"""
     external_subscription_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_subscription_id', 'style': 'form', 'explode': True }})
-    r"""External subscription ID"""  
+
+    r"""External subscription ID"""
     failed_at_from: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'failed_at_from', 'style': 'form', 'explode': True }})
-    r"""Payment failed date from"""  
+
+    r"""Payment failed date from"""
     failed_at_to: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'failed_at_to', 'style': 'form', 'explode': True }})
-    r"""Payment failed date to"""  
+
+    r"""Payment failed date to"""
     fee_type: Optional[FindAllFeesFeeTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fee_type', 'style': 'form', 'explode': True }})
-    r"""Fee type"""  
+
+    r"""Fee type"""
     page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    r"""Number of page"""  
+
+    r"""Number of page"""
     payment_status: Optional[FindAllFeesPaymentStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'payment_status', 'style': 'form', 'explode': True }})
-    r"""Payment status"""  
+
+    r"""Payment status"""
     per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    r"""Number of records per page"""  
+
+    r"""Number of records per page"""
     refunded_at_from: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'refunded_at_from', 'style': 'form', 'explode': True }})
-    r"""Payment refund date from"""  
+
+    r"""Payment refund date from"""
     refunded_at_to: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'refunded_at_to', 'style': 'form', 'explode': True }})
-    r"""Payment refund date to"""  
+
+    r"""Payment refund date to"""
     succeeded_at_from: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'succeeded_at_from', 'style': 'form', 'explode': True }})
-    r"""Payment succees date from"""  
+
+    r"""Payment succees date from"""
     succeeded_at_to: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'succeeded_at_to', 'style': 'form', 'explode': True }})
-    r"""Payment succees date to"""  
+
+    r"""Payment succees date to"""
     
 
 @dataclasses.dataclass
 class FindAllFeesResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-    r"""Unauthorized error"""  
+
+    r"""Unauthorized error"""
     api_response_unprocessable_entity: Optional[shared_apiresponseunprocessableentity.APIResponseUnprocessableEntity] = dataclasses.field(default=None)
-    r"""Unprocessable entity error"""  
+
+    r"""Unprocessable entity error"""
     fees_paginated: Optional[shared_feespaginated.FeesPaginated] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

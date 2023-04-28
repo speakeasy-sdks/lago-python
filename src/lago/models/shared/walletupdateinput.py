@@ -14,8 +14,10 @@ from typing import Optional
 @dataclasses.dataclass
 class WalletUpdateInputWallet:
     
-    expiration_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expiration_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})  
-    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})  
+    expiration_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expiration_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
+
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -23,5 +25,6 @@ class WalletUpdateInputWallet:
 class WalletUpdateInput:
     r"""Update an existing wallet"""
     
-    wallet: WalletUpdateInputWallet = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallet') }})  
+    wallet: WalletUpdateInputWallet = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallet') }})
+
     

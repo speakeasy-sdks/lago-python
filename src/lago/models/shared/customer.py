@@ -12,5 +12,6 @@ from lago import utils
 class Customer:
     r"""Successful response"""
     
-    customer: shared_customerobject.CustomerObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer') }})  
+    customer: shared_customerobject.CustomerObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer') }})
+
     

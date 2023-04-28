@@ -15,14 +15,16 @@ from typing import Optional
 class GetCustomerPortalURLRequest:
     
     customer_external_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'customer_external_id', 'style': 'simple', 'explode': False }})
-    r"""External ID of the existing customer"""  
+
+    r"""External ID of the existing customer"""
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class GetCustomerPortalURL200ApplicationJSONCustomer:
     
-    portal_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('portal_url') }})  
+    portal_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('portal_url') }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -30,21 +32,29 @@ class GetCustomerPortalURL200ApplicationJSONCustomer:
 class GetCustomerPortalURL200ApplicationJSON:
     r"""Successful response"""
     
-    customer: GetCustomerPortalURL200ApplicationJSONCustomer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer') }})  
+    customer: GetCustomerPortalURL200ApplicationJSONCustomer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer') }})
+
     
 
 @dataclasses.dataclass
 class GetCustomerPortalURLResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     api_response_forbidden: Optional[shared_apiresponseforbidden.APIResponseForbidden] = dataclasses.field(default=None)
-    r"""Forbidden"""  
+
+    r"""Forbidden"""
     api_response_not_found: Optional[shared_apiresponsenotfound.APIResponseNotFound] = dataclasses.field(default=None)
-    r"""Not Found error"""  
+
+    r"""Not Found error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-    r"""Unauthorized error"""  
+
+    r"""Unauthorized error"""
     get_customer_portal_url_200_application_json_object: Optional[GetCustomerPortalURL200ApplicationJSON] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

@@ -11,8 +11,12 @@ from lago import utils
 @dataclasses.dataclass
 class CreditNoteItemObject:
     
-    amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})  
-    amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency') }})  
-    fee: shared_feeobject.FeeObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fee') }})  
-    lago_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lago_id') }})  
+    amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})
+
+    amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency') }})
+
+    fee: shared_feeobject.FeeObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fee') }})
+
+    lago_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lago_id') }})
+
     

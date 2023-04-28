@@ -17,14 +17,21 @@ class AppliedCouponInputAppliedCouponFrequencyEnum(str, Enum):
 @dataclasses.dataclass
 class AppliedCouponInputAppliedCoupon:
     
-    coupon_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('coupon_code') }})  
-    external_customer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_customer_id') }})  
-    amount_cents: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents'), 'exclude': lambda f: f is None }})  
-    amount_currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency'), 'exclude': lambda f: f is None }})  
+    coupon_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('coupon_code') }})
+
+    external_customer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_customer_id') }})
+
+    amount_cents: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents'), 'exclude': lambda f: f is None }})
+
+    amount_currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency'), 'exclude': lambda f: f is None }})
+
     frequency: Optional[AppliedCouponInputAppliedCouponFrequencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
-    r"""Frequency type"""  
-    frequency_duration: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency_duration'), 'exclude': lambda f: f is None }})  
-    percentage_rate: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage_rate'), 'exclude': lambda f: f is None }})  
+
+    r"""Frequency type"""
+    frequency_duration: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency_duration'), 'exclude': lambda f: f is None }})
+
+    percentage_rate: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('percentage_rate'), 'exclude': lambda f: f is None }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -32,5 +39,6 @@ class AppliedCouponInputAppliedCoupon:
 class AppliedCouponInput:
     r"""Apply coupon payload"""
     
-    applied_coupon: AppliedCouponInputAppliedCoupon = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_coupon') }})  
+    applied_coupon: AppliedCouponInputAppliedCoupon = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_coupon') }})
+
     

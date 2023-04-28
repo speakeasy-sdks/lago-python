@@ -13,27 +13,38 @@ from typing import Optional
 class FindAllWalletTransactionsRequest:
     
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    r"""Lago ID of the existing wallet"""  
+
+    r"""Lago ID of the existing wallet"""
     page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    r"""Number of page"""  
+
+    r"""Number of page"""
     per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    r"""Number of records per page"""  
+
+    r"""Number of records per page"""
     status: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    r"""Status (pending or settled)"""  
+
+    r"""Status (pending or settled)"""
     transaction_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'transaction_type', 'style': 'form', 'explode': True }})
-    r"""Transaction Type (inbound or outbound)"""  
+
+    r"""Transaction Type (inbound or outbound)"""
     
 
 @dataclasses.dataclass
 class FindAllWalletTransactionsResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     api_response_not_found: Optional[shared_apiresponsenotfound.APIResponseNotFound] = dataclasses.field(default=None)
-    r"""Not Found error"""  
+
+    r"""Not Found error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-    r"""Unauthorized error"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Unauthorized error"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     wallet_transactions: Optional[shared_wallettransactions.WalletTransactions] = dataclasses.field(default=None)
-    r"""Successful response"""  
+
+    r"""Successful response"""
     

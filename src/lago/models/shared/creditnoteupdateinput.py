@@ -18,7 +18,8 @@ class CreditNoteUpdateInputCreditNoteRefundStatusEnum(str, Enum):
 class CreditNoteUpdateInputCreditNote:
     
     refund_status: CreditNoteUpdateInputCreditNoteRefundStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_status') }})
-    r"""Refund status"""  
+
+    r"""Refund status"""
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -26,5 +27,6 @@ class CreditNoteUpdateInputCreditNote:
 class CreditNoteUpdateInput:
     r"""Update an existing credit note"""
     
-    credit_note: CreditNoteUpdateInputCreditNote = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_note') }})  
+    credit_note: CreditNoteUpdateInputCreditNote = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_note') }})
+
     

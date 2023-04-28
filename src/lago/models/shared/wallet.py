@@ -12,5 +12,6 @@ from lago import utils
 class Wallet:
     r"""Successful response"""
     
-    wallet: shared_walletobject.WalletObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallet') }})  
+    wallet: shared_walletobject.WalletObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallet') }})
+
     

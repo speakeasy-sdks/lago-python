@@ -13,5 +13,4 @@ class Customers:
     r"""Successful response"""
     
     customers: list[shared_customerobject.CustomerObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customers') }})
-
     

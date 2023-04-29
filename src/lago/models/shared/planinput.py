@@ -21,9 +21,7 @@ class PlanInputPlanChargesChargeModelEnum(str, Enum):
 class PlanInputPlanChargesGroupProperties:
     
     group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_id') }})
-
     values: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values') }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -31,18 +29,12 @@ class PlanInputPlanChargesGroupProperties:
 class PlanInputPlanCharges:
     
     billable_metric_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billable_metric_id'), 'exclude': lambda f: f is None }})
-
     charge_model: Optional[PlanInputPlanChargesChargeModelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('charge_model'), 'exclude': lambda f: f is None }})
-
     r"""Charge model type"""
     group_properties: Optional[list[PlanInputPlanChargesGroupProperties]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_properties'), 'exclude': lambda f: f is None }})
-
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-
     instant: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instant'), 'exclude': lambda f: f is None }})
-
     properties: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('properties'), 'exclude': lambda f: f is None }})
-
     
 class PlanInputPlanIntervalEnum(str, Enum):
     r"""Plan interval"""
@@ -56,26 +48,16 @@ class PlanInputPlanIntervalEnum(str, Enum):
 class PlanInputPlan:
     
     amount_cents: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents'), 'exclude': lambda f: f is None }})
-
     amount_currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency'), 'exclude': lambda f: f is None }})
-
     bill_charges_monthly: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bill_charges_monthly'), 'exclude': lambda f: f is None }})
-
     charges: Optional[list[PlanInputPlanCharges]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('charges'), 'exclude': lambda f: f is None }})
-
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-
     interval: Optional[PlanInputPlanIntervalEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval'), 'exclude': lambda f: f is None }})
-
     r"""Plan interval"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-
     pay_in_advance: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pay_in_advance'), 'exclude': lambda f: f is None }})
-
     trial_period: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trial_period'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -84,5 +66,4 @@ class PlanInput:
     r"""Plan payload"""
     
     plan: PlanInputPlan = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('plan') }})
-
     

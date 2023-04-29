@@ -25,26 +25,15 @@ class BillableMetricObjectAggregationTypeEnum(str, Enum):
 class BillableMetricObject:
     
     active_subscriptions_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active_subscriptions_count') }})
-
     aggregation_type: BillableMetricObjectAggregationTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aggregation_type') }})
-
     r"""Aggregation type"""
     code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})
-
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-
     draft_invoices_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('draft_invoices_count') }})
-
     lago_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lago_id') }})
-
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-
     plans_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('plans_count') }})
-
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-
     field_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('field_name'), 'exclude': lambda f: f is None }})
-
     group: Optional[shared_billablemetricgroup.BillableMetricGroup] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group'), 'exclude': lambda f: f is None }})
-
     

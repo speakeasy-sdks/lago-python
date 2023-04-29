@@ -13,5 +13,4 @@ class BillableMetric:
     r"""Successful response"""
     
     billable_metric: shared_billablemetricobject.BillableMetricObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billable_metric') }})
-
     

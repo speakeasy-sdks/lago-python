@@ -12,11 +12,8 @@ from typing import Optional
 class WalletTransactionInputWalletTransaction:
     
     wallet_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallet_id') }})
-
     granted_credits: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('granted_credits'), 'exclude': lambda f: f is None }})
-
     paid_credits: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paid_credits'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -25,5 +22,4 @@ class WalletTransactionInput:
     r"""Wallet transaction payload"""
     
     wallet_transaction: WalletTransactionInputWalletTransaction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallet_transaction') }})
-
     

@@ -13,5 +13,4 @@ class AppliedCoupons:
     r"""Successful response"""
     
     applied_coupons: list[shared_appliedcouponobject.AppliedCouponObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_coupons') }})
-
     

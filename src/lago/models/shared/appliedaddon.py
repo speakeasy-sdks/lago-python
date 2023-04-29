@@ -13,5 +13,4 @@ class AppliedAddOn:
     r"""Successful response"""
     
     applied_add_on: shared_appliedaddonobject.AppliedAddOnObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_add_on') }})
-
     

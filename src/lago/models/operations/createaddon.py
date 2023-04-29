@@ -14,21 +14,14 @@ from typing import Optional
 class CreateAddOnResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     add_on: Optional[shared_addon.AddOn] = dataclasses.field(default=None)
-
     r"""Successful response"""
     api_response_bad_request: Optional[shared_apiresponsebadrequest.APIResponseBadRequest] = dataclasses.field(default=None)
-
     r"""Bad Request error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-
     r"""Unauthorized error"""
     api_response_unprocessable_entity: Optional[shared_apiresponseunprocessableentity.APIResponseUnprocessableEntity] = dataclasses.field(default=None)
-
     r"""Unprocessable entity error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

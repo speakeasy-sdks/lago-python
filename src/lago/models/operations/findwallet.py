@@ -13,7 +13,6 @@ from typing import Optional
 class FindWalletRequest:
     
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-
     r"""Lago ID of the existing wallet"""
     
 
@@ -21,18 +20,12 @@ class FindWalletRequest:
 class FindWalletResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     api_response_not_found: Optional[shared_apiresponsenotfound.APIResponseNotFound] = dataclasses.field(default=None)
-
     r"""Not Found error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-
     r"""Unauthorized error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     wallet: Optional[shared_wallet.Wallet] = dataclasses.field(default=None)
-
     r"""Successful response"""
     

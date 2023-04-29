@@ -18,16 +18,12 @@ class FindAllAppliedCouponsStatusEnum(str, Enum):
 class FindAllAppliedCouponsRequest:
     
     external_customer_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_customer_id', 'style': 'form', 'explode': True }})
-
     r"""External customer ID"""
     page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-
     r"""Number of page"""
     per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-
     r"""Number of records per page"""
     status: Optional[FindAllAppliedCouponsStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-
     r"""Applied coupon status"""
     
 
@@ -35,15 +31,10 @@ class FindAllAppliedCouponsRequest:
 class FindAllAppliedCouponsResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-
     r"""Unauthorized error"""
     applied_coupons: Optional[shared_appliedcoupons.AppliedCoupons] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

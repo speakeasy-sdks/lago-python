@@ -12,7 +12,5 @@ from typing import Any
 class BillableMetricGroup:
     
     key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key') }})
-
     values: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values') }})
-
     

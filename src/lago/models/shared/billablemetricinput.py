@@ -22,18 +22,12 @@ class BillableMetricInputBillableMetricAggregationTypeEnum(str, Enum):
 class BillableMetricInputBillableMetric:
     
     aggregation_type: Optional[BillableMetricInputBillableMetricAggregationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aggregation_type'), 'exclude': lambda f: f is None }})
-
     r"""Aggregation type"""
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-
     field_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('field_name'), 'exclude': lambda f: f is None }})
-
     group: Optional[shared_billablemetricgroup.BillableMetricGroup] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group'), 'exclude': lambda f: f is None }})
-
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -42,5 +36,4 @@ class BillableMetricInput:
     r"""Billable metric payload"""
     
     billable_metric: BillableMetricInputBillableMetric = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billable_metric') }})
-
     

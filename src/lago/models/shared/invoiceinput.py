@@ -13,11 +13,8 @@ from typing import Optional
 class InvoiceInputInvoiceMetadata:
     
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-
     key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key'), 'exclude': lambda f: f is None }})
-
     value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
-
     
 class InvoiceInputInvoicePaymentStatusEnum(str, Enum):
     r"""Status"""
@@ -31,10 +28,8 @@ class InvoiceInputInvoicePaymentStatusEnum(str, Enum):
 class InvoiceInputInvoice:
     
     payment_status: InvoiceInputInvoicePaymentStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_status') }})
-
     r"""Status"""
     metadata: Optional[list[InvoiceInputInvoiceMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -43,5 +38,4 @@ class InvoiceInput:
     r"""Update an existing invoice"""
     
     invoice: InvoiceInputInvoice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice') }})
-
     

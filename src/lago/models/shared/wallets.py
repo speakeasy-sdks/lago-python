@@ -13,5 +13,4 @@ class Wallets:
     r"""Successful response"""
     
     wallets: list[shared_walletobject.WalletObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wallets') }})
-
     

@@ -14,7 +14,5 @@ class FeesPaginated:
     r"""Successful response"""
     
     fees: list[shared_feeobject.FeeObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fees') }})
-
     meta: shared_paginationmeta.PaginationMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
-
     

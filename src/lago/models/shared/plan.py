@@ -13,5 +13,4 @@ class Plan:
     r"""Successful response"""
     
     plan: shared_planobject.PlanObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('plan') }})
-
     

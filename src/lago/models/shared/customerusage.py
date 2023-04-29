@@ -13,5 +13,4 @@ class CustomerUsage:
     r"""Successful response"""
     
     customer_usage: shared_customerusageobject.CustomerUsageObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer_usage') }})
-
     

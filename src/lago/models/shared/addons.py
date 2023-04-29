@@ -13,5 +13,4 @@ class AddOns:
     r"""Successful response"""
     
     add_ons: list[shared_addonobject.AddOnObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('add_ons') }})
-
     

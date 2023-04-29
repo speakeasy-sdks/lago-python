@@ -13,5 +13,4 @@ class Invoices:
     r"""Successful response"""
     
     invoices: list[shared_invoiceobject.InvoiceObject] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoices') }})
-
     

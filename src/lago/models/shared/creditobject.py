@@ -17,9 +17,7 @@ class CreditObjectInvoicePaymentStatusEnum(str, Enum):
 class CreditObjectInvoice:
     
     lago_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lago_id') }})
-
     payment_status: CreditObjectInvoicePaymentStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_status') }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -27,13 +25,9 @@ class CreditObjectInvoice:
 class CreditObjectItem:
     
     code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})
-
     lago_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lago_id') }})
-
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -41,13 +35,8 @@ class CreditObjectItem:
 class CreditObject:
     
     amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})
-
     amount_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency') }})
-
     invoice: CreditObjectInvoice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice') }})
-
     item: CreditObjectItem = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('item') }})
-
     lago_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lago_id') }})
-
     

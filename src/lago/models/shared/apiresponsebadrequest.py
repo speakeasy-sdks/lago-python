@@ -12,7 +12,5 @@ class APIResponseBadRequest:
     r"""Bad Request error"""
     
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
-
     status: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-
     

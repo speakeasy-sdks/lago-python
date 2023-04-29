@@ -13,7 +13,6 @@ from typing import Optional
 class DestroyAddOnRequest:
     
     code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'code', 'style': 'simple', 'explode': False }})
-
     r"""Code of the existing add-on"""
     
 
@@ -21,18 +20,12 @@ class DestroyAddOnRequest:
 class DestroyAddOnResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     add_on: Optional[shared_addon.AddOn] = dataclasses.field(default=None)
-
     r"""Successful response"""
     api_response_not_found: Optional[shared_apiresponsenotfound.APIResponseNotFound] = dataclasses.field(default=None)
-
     r"""Not Found error"""
     api_response_unauthorized: Optional[shared_apiresponseunauthorized.APIResponseUnauthorized] = dataclasses.field(default=None)
-
     r"""Unauthorized error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

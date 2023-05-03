@@ -11,10 +11,10 @@ from typing import Any, Optional
 @dataclasses.dataclass
 class EventEstimateFeesInputEvent:
     
-    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})  
-    external_customer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_customer_id'), 'exclude': lambda f: f is None }})  
-    external_subscription_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_subscription_id'), 'exclude': lambda f: f is None }})  
-    properties: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('properties'), 'exclude': lambda f: f is None }})  
+    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})
+    external_customer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_customer_id'), 'exclude': lambda f: f is None }})
+    external_subscription_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_subscription_id'), 'exclude': lambda f: f is None }})
+    properties: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('properties'), 'exclude': lambda f: f is None }})
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -22,5 +22,5 @@ class EventEstimateFeesInputEvent:
 class EventEstimateFeesInput:
     r"""Event payload for instant fee estimate"""
     
-    event: EventEstimateFeesInputEvent = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event') }})  
+    event: EventEstimateFeesInputEvent = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event') }})
     

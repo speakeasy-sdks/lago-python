@@ -12,5 +12,5 @@ from lago import utils
 class Invoice:
     r"""Successful response"""
     
-    invoice: shared_invoiceobject.InvoiceObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice') }})  
+    invoice: shared_invoiceobject.InvoiceObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice') }})
     

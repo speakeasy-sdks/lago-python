@@ -11,6 +11,6 @@ from typing import Any
 @dataclasses.dataclass
 class GroupPropertiesObject:
     
-    group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_id') }})  
-    values: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values') }})  
+    group_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_id') }})
+    values: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values') }})
     

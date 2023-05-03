@@ -21,7 +21,7 @@ pip install lago-billing
 <!-- Start SDK Example Usage -->
 ```python
 import lago
-from lago.models import operations, shared
+from lago.models import operations
 
 s = lago.Lago(
     security=shared.Security(
@@ -31,9 +31,9 @@ s = lago.Lago(
 
 
 req = operations.FindInvoiceRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
-    
+
 res = s.invoices.find(req)
 
 if res.invoice is not None:
@@ -45,108 +45,108 @@ if res.invoice is not None:
 ## Available Resources and Operations
 
 
-### add_ons
+### [add_ons](docs/addons/README.md)
 
-* `apply` - Apply an add-on to a customer
-* `create` - Create a new add-on
-* `destroy` - Delete an add-on
-* `find` - Find add-on by code
-* `find_all` - Find add-ons
-* `update` - Update an existing add-on
+* [apply](docs/addons/README.md#apply) - Apply an add-on to a customer
+* [create](docs/addons/README.md#create) - Create a new add-on
+* [destroy](docs/addons/README.md#destroy) - Delete an add-on
+* [find](docs/addons/README.md#find) - Find add-on by code
+* [find_all](docs/addons/README.md#find_all) - Find add-ons
+* [update](docs/addons/README.md#update) - Update an existing add-on
 
-### billable_metrics
+### [billable_metrics](docs/billablemetrics/README.md)
 
-* `create` - Create a new billable metric
-* `destroy` - Delete a billable metric
-* `find` - Find billable metric by code
-* `find_all` - Find Billable metrics
-* `find_all_groups` - Find Billable metric groups
-* `update` - Update an existing billable metric
+* [create](docs/billablemetrics/README.md#create) - Create a new billable metric
+* [destroy](docs/billablemetrics/README.md#destroy) - Delete a billable metric
+* [find](docs/billablemetrics/README.md#find) - Find billable metric by code
+* [find_all](docs/billablemetrics/README.md#find_all) - Find Billable metrics
+* [find_all_groups](docs/billablemetrics/README.md#find_all_groups) - Find Billable metric groups
+* [update](docs/billablemetrics/README.md#update) - Update an existing billable metric
 
-### coupons
+### [coupons](docs/coupons/README.md)
 
-* `applied_coupons` - Find Applied Coupons
-* `apply` - Apply a coupon to a customer
-* `create` - Create a new coupon
-* `destroy` - Delete a coupon
-* `find` - Find coupon by code
-* `find_all` - Find Coupons
-* `update` - Update an existing coupon
+* [applied_coupons](docs/coupons/README.md#applied_coupons) - Find Applied Coupons
+* [apply](docs/coupons/README.md#apply) - Apply a coupon to a customer
+* [create](docs/coupons/README.md#create) - Create a new coupon
+* [destroy](docs/coupons/README.md#destroy) - Delete a coupon
+* [find](docs/coupons/README.md#find) - Find coupon by code
+* [find_all](docs/coupons/README.md#find_all) - Find Coupons
+* [update](docs/coupons/README.md#update) - Update an existing coupon
 
-### credit_notes
+### [credit_notes](docs/creditnotes/README.md)
 
-* `create` - Create a new Credit note
-* `download` - Download an existing credit note
-* `find` - Find credit note
-* `find_all` - Find Credit notes
-* `update` - Update an existing credit note
-* `void` - Void existing credit note
+* [create](docs/creditnotes/README.md#create) - Create a new Credit note
+* [download](docs/creditnotes/README.md#download) - Download an existing credit note
+* [find](docs/creditnotes/README.md#find) - Find credit note
+* [find_all](docs/creditnotes/README.md#find_all) - Find Credit notes
+* [update](docs/creditnotes/README.md#update) - Update an existing credit note
+* [void](docs/creditnotes/README.md#void) - Void existing credit note
 
-### customers
+### [customers](docs/customers/README.md)
 
-* `create` - Create a customer
-* `current_usage` - Find customer current usage
-* `delete_applied_coupon` - Delete customer's appplied coupon
-* `destroy` - Delete a customer
-* `find` - Find customer by external ID
-* `find_all` - Find customers
-* `portal_url` - Get customer portal URL
+* [create](docs/customers/README.md#create) - Create a customer
+* [current_usage](docs/customers/README.md#current_usage) - Find customer current usage
+* [delete_applied_coupon](docs/customers/README.md#delete_applied_coupon) - Delete customer's appplied coupon
+* [destroy](docs/customers/README.md#destroy) - Delete a customer
+* [find](docs/customers/README.md#find) - Find customer by external ID
+* [find_all](docs/customers/README.md#find_all) - Find customers
+* [portal_url](docs/customers/README.md#portal_url) - Get customer portal URL
 
-### events
+### [events](docs/events/README.md)
 
-* `estimate_fees` - Estimate fees for an instant charge
-* `batch_create` - Create batch events
-* `create` - Create a new event
-* `find` - Find event by transaction ID
+* [estimate_fees](docs/events/README.md#estimate_fees) - Estimate fees for an instant charge
+* [batch_create](docs/events/README.md#batch_create) - Create batch events
+* [create](docs/events/README.md#create) - Create a new event
+* [find](docs/events/README.md#find) - Find event by transaction ID
 
-### fees
+### [fees](docs/fees/README.md)
 
-* `find` - Find fee by ID
-* `find_all` - Find all fees
-* `update` - Update an existing fee
+* [find](docs/fees/README.md#find) - Find fee by ID
+* [find_all](docs/fees/README.md#find_all) - Find all fees
+* [update](docs/fees/README.md#update) - Update an existing fee
 
-### invoices
+### [invoices](docs/invoices/README.md)
 
-* `download` - Download an existing invoice
-* `finalize` - Finalize a draft invoice
-* `find` - Find invoice by ID
-* `find_all` - Find all invoices
-* `retry` - Retry invoice payment
-* `update` - Update an existing invoice status
-* `void` - Refresh a draft invoice
+* [download](docs/invoices/README.md#download) - Download an existing invoice
+* [finalize](docs/invoices/README.md#finalize) - Finalize a draft invoice
+* [find](docs/invoices/README.md#find) - Find invoice by ID
+* [find_all](docs/invoices/README.md#find_all) - Find all invoices
+* [retry](docs/invoices/README.md#retry) - Retry invoice payment
+* [update](docs/invoices/README.md#update) - Update an existing invoice status
+* [void](docs/invoices/README.md#void) - Refresh a draft invoice
 
-### organizations
+### [organizations](docs/organizations/README.md)
 
-* `update` - Update an existing Organization
+* [update](docs/organizations/README.md#update) - Update an existing Organization
 
-### plans
+### [plans](docs/plans/README.md)
 
-* `create` - Create a new plan
-* `destroy` - Delete a plan
-* `find` - Fin plan by code
-* `find_all` - Find plans
-* `update` - Update an existing plan
+* [create](docs/plans/README.md#create) - Create a new plan
+* [destroy](docs/plans/README.md#destroy) - Delete a plan
+* [find](docs/plans/README.md#find) - Fin plan by code
+* [find_all](docs/plans/README.md#find_all) - Find plans
+* [update](docs/plans/README.md#update) - Update an existing plan
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `create` - Assign a plan to a customer
-* `destroy` - Terminate a subscription
-* `find_all` - Find subscriptions
-* `update` - Update an existing subscription
+* [create](docs/subscriptions/README.md#create) - Assign a plan to a customer
+* [destroy](docs/subscriptions/README.md#destroy) - Terminate a subscription
+* [find_all](docs/subscriptions/README.md#find_all) - Find subscriptions
+* [update](docs/subscriptions/README.md#update) - Update an existing subscription
 
-### wallets
+### [wallets](docs/wallets/README.md)
 
-* `create` - Create a new wallet
-* `create_transaction` - Create a new wallet transaction
-* `destroy` - Delete a wallet
-* `find` - Find wallet
-* `find_all` - Find wallets
-* `find_all_transactions` - Find wallet transactions
-* `update` - Update an existing wallet
+* [create](docs/wallets/README.md#create) - Create a new wallet
+* [create_transaction](docs/wallets/README.md#create_transaction) - Create a new wallet transaction
+* [destroy](docs/wallets/README.md#destroy) - Delete a wallet
+* [find](docs/wallets/README.md#find) - Find wallet
+* [find_all](docs/wallets/README.md#find_all) - Find wallets
+* [find_all_transactions](docs/wallets/README.md#find_all_transactions) - Find wallet transactions
+* [update](docs/wallets/README.md#update) - Update an existing wallet
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `fetch_public_key` - Fetch webhook public key
+* [fetch_public_key](docs/webhooks/README.md#fetch_public_key) - Fetch webhook public key
 <!-- End SDK Available Operations -->
 
 ### Maturity

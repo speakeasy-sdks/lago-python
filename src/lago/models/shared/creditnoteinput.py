@@ -12,8 +12,8 @@ from typing import Optional
 @dataclasses.dataclass
 class CreditNoteInputCreditNoteItems:
     
-    amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})  
-    fee_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fee_id') }})  
+    amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents') }})
+    fee_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fee_id') }})
     
 class CreditNoteInputCreditNoteReasonEnum(str, Enum):
     r"""Reason"""
@@ -29,13 +29,13 @@ class CreditNoteInputCreditNoteReasonEnum(str, Enum):
 @dataclasses.dataclass
 class CreditNoteInputCreditNote:
     
-    credit_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_amount_cents') }})  
-    invoice_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice_id') }})  
-    items: list[CreditNoteInputCreditNoteItems] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('items') }})  
+    credit_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_amount_cents') }})
+    invoice_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice_id') }})
+    items: list[CreditNoteInputCreditNoteItems] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('items') }})
     reason: CreditNoteInputCreditNoteReasonEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reason') }})
-    r"""Reason"""  
-    refund_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_amount_cents') }})  
-    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})  
+    r"""Reason"""
+    refund_amount_cents: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_amount_cents') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -43,5 +43,5 @@ class CreditNoteInputCreditNote:
 class CreditNoteInput:
     r"""Credit note payload"""
     
-    credit_note: CreditNoteInputCreditNote = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_note') }})  
+    credit_note: CreditNoteInputCreditNote = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credit_note') }})
     

@@ -12,5 +12,5 @@ from lago import utils
 class Subscription:
     r"""Successful response"""
     
-    subscription: shared_subscriptionobject.SubscriptionObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subscription') }})  
+    subscription: shared_subscriptionobject.SubscriptionObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subscription') }})
     

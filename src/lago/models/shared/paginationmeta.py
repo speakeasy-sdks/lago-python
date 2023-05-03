@@ -12,13 +12,13 @@ from typing import Optional
 class PaginationMeta:
     
     current_page: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('current_page') }})
-    r"""Current page"""  
+    r"""Current page"""
     total_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_count') }})
-    r"""Total number of records"""  
+    r"""Total number of records"""
     total_pages: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_pages') }})
-    r"""Total number of pages"""  
+    r"""Total number of pages"""
     next_page: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('next_page'), 'exclude': lambda f: f is None }})
-    r"""Next page"""  
+    r"""Next page"""
     prev_page: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prev_page'), 'exclude': lambda f: f is None }})
-    r"""Previous page"""  
+    r"""Previous page"""
     

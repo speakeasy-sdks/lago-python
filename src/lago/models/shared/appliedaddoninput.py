@@ -11,10 +11,10 @@ from typing import Optional
 @dataclasses.dataclass
 class AppliedAddOnInputAppliedAddOn:
     
-    add_on_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('add_on_code') }})  
-    external_customer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_customer_id') }})  
-    amount_cents: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents'), 'exclude': lambda f: f is None }})  
-    amount_currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency'), 'exclude': lambda f: f is None }})  
+    add_on_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('add_on_code') }})
+    external_customer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_customer_id') }})
+    amount_cents: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_cents'), 'exclude': lambda f: f is None }})
+    amount_currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount_currency'), 'exclude': lambda f: f is None }})
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -22,5 +22,5 @@ class AppliedAddOnInputAppliedAddOn:
 class AppliedAddOnInput:
     r"""Apply add-on payload"""
     
-    applied_add_on: AppliedAddOnInputAppliedAddOn = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_add_on') }})  
+    applied_add_on: AppliedAddOnInputAppliedAddOn = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_add_on') }})
     

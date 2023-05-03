@@ -19,7 +19,7 @@ class FeeUpdateInputInvoicePaymentStatusEnum(str, Enum):
 class FeeUpdateInputInvoice:
     
     payment_status: FeeUpdateInputInvoicePaymentStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_status') }})
-    r"""Status"""  
+    r"""Status"""
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -27,5 +27,5 @@ class FeeUpdateInputInvoice:
 class FeeUpdateInput:
     r"""Payload to update a fee"""
     
-    invoice: FeeUpdateInputInvoice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice') }})  
+    invoice: FeeUpdateInputInvoice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice') }})
     

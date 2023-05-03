@@ -12,5 +12,5 @@ from lago import utils
 class AppliedCoupon:
     r"""Successful response"""
     
-    applied_coupon: shared_appliedcouponobject.AppliedCouponObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_coupon') }})  
+    applied_coupon: shared_appliedcouponobject.AppliedCouponObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('applied_coupon') }})
     

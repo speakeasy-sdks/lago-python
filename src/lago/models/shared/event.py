@@ -12,5 +12,5 @@ from lago import utils
 class Event:
     r"""Successful response"""
     
-    event: shared_eventobject.EventObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event') }})  
+    event: shared_eventobject.EventObject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event') }})
     

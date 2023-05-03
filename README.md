@@ -31,7 +31,7 @@ s = lago.Lago(
 
 
 req = operations.FindInvoiceRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.find(req)

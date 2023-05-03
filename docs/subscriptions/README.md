@@ -33,11 +33,11 @@ s = lago.Lago(
 
 req = shared.SubscriptionCreateInput(
     subscription=shared.SubscriptionCreateInputSubscription(
-        billing_time="anniversary",
-        external_customer_id="12345",
-        external_id="54321",
-        name="Test name",
-        plan_code="example_code",
+        billing_time=shared.SubscriptionCreateInputSubscriptionBillingTimeEnum.ANNIVERSARY,
+        external_customer_id='12345',
+        external_id='54321',
+        name='Test name',
+        plan_code='example_code',
         subscription_at=dateutil.parser.isoparse('2022-08-08T00:00:00Z'),
     ),
 )
@@ -66,7 +66,7 @@ s = lago.Lago(
 
 
 req = operations.DestroySubscriptionRequest(
-    external_id="example_id",
+    external_id='example_id',
 )
 
 res = s.subscriptions.destroy(req)
@@ -93,7 +93,7 @@ s = lago.Lago(
 
 
 req = operations.FindAllSubscriptionsRequest(
-    external_customer_id="12345",
+    external_customer_id='12345',
     page=2,
     per_page=20,
 )
@@ -125,11 +125,11 @@ s = lago.Lago(
 req = operations.UpdateSubscriptionRequest(
     subscription_update_input=shared.SubscriptionUpdateInput(
         subscription=shared.SubscriptionUpdateInputSubscription(
-            name="New name",
+            name='New name',
             subscription_at=dateutil.parser.isoparse('2022-08-08T00:00:00Z'),
         ),
     ),
-    external_id="example_id",
+    external_id='example_id',
 )
 
 res = s.subscriptions.update(req)

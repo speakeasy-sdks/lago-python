@@ -36,11 +36,11 @@ s = lago.Lago(
 
 req = shared.WalletInput(
     wallet=shared.WalletInputWallet(
-        currency="EUR",
+        currency='EUR',
         expiration_at=dateutil.parser.isoparse('2022-09-14T23:59:59Z'),
-        external_customer_id="12345",
+        external_customer_id='12345',
         granted_credits=10,
-        name="Wallet name",
+        name='Wallet name',
         paid_credits=500,
         rate_amount=2,
     ),
@@ -73,7 +73,7 @@ req = shared.WalletTransactionInput(
     wallet_transaction=shared.WalletTransactionInputWalletTransaction(
         granted_credits=10,
         paid_credits=100,
-        wallet_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+        wallet_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
     ),
 )
 
@@ -101,7 +101,7 @@ s = lago.Lago(
 
 
 req = operations.DestroyWalletRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.wallets.destroy(req)
@@ -128,7 +128,7 @@ s = lago.Lago(
 
 
 req = operations.FindWalletRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.wallets.find(req)
@@ -155,7 +155,7 @@ s = lago.Lago(
 
 
 req = operations.FindAllWalletsRequest(
-    external_customer_id="12345",
+    external_customer_id='12345',
     page=2,
     per_page=20,
 )
@@ -184,11 +184,11 @@ s = lago.Lago(
 
 
 req = operations.FindAllWalletTransactionsRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
     page=2,
     per_page=20,
-    status="pending",
-    transaction_type="inbound",
+    status='pending',
+    transaction_type='inbound',
 )
 
 res = s.wallets.find_all_transactions(req)
@@ -219,10 +219,10 @@ req = operations.UpdateWalletRequest(
     wallet_update_input=shared.WalletUpdateInput(
         wallet=shared.WalletUpdateInputWallet(
             expiration_at=dateutil.parser.isoparse('2022-09-14T23:59:59Z'),
-            name="Wallet name",
+            name='Wallet name',
         ),
     ),
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.wallets.update(req)

@@ -34,10 +34,10 @@ s = lago.Lago(
 
 
 req = operations.FindAllAppliedCouponsRequest(
-    external_customer_id="12345",
+    external_customer_id='12345',
     page=2,
     per_page=20,
-    status="active",
+    status=operations.FindAllAppliedCouponsStatusEnum.ACTIVE,
 )
 
 res = s.coupons.applied_coupons(req)
@@ -66,10 +66,10 @@ s = lago.Lago(
 req = shared.AppliedCouponInput(
     applied_coupon=shared.AppliedCouponInputAppliedCoupon(
         amount_cents=1200,
-        amount_currency="EUR",
-        coupon_code="example_code",
-        external_customer_id="123456",
-        frequency="once",
+        amount_currency='EUR',
+        coupon_code='example_code',
+        external_customer_id='123456',
+        frequency=shared.AppliedCouponInputAppliedCouponFrequencyEnum.ONCE,
         frequency_duration=3,
         percentage_rate=25,
     ),
@@ -102,22 +102,22 @@ s = lago.Lago(
 req = shared.CouponInput(
     coupon=shared.CouponInputCoupon(
         amount_cents=1200,
-        amount_currency="EUR",
+        amount_currency='EUR',
         applies_to=shared.CouponInputCouponAppliesTo(
             plan_codes=[
-                "code1",
-                "code1",
-                "code1",
-                "code1",
+                'code1',
+                'code1',
+                'code1',
+                'code1',
             ],
         ),
-        code="example_code",
-        coupon_type="percentage",
-        expiration="time_limit",
+        code='example_code',
+        coupon_type=shared.CouponInputCouponCouponTypeEnum.PERCENTAGE,
+        expiration=shared.CouponInputCouponExpirationEnum.TIME_LIMIT,
         expiration_at=dateutil.parser.isoparse('2022-09-14T23:59:59Z'),
-        frequency="once",
+        frequency=shared.CouponInputCouponFrequencyEnum.ONCE,
         frequency_duration=3,
-        name="coupon1",
+        name='coupon1',
         percentage_rate=25,
         reusable=True,
     ),
@@ -147,7 +147,7 @@ s = lago.Lago(
 
 
 req = operations.DestroyCouponRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.coupons.destroy(req)
@@ -174,7 +174,7 @@ s = lago.Lago(
 
 
 req = operations.FindCouponRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.coupons.find(req)
@@ -233,27 +233,27 @@ req = operations.UpdateCouponRequest(
     coupon_input=shared.CouponInput(
         coupon=shared.CouponInputCoupon(
             amount_cents=1200,
-            amount_currency="EUR",
+            amount_currency='EUR',
             applies_to=shared.CouponInputCouponAppliesTo(
                 plan_codes=[
-                    "code1",
-                    "code1",
-                    "code1",
-                    "code1",
+                    'code1',
+                    'code1',
+                    'code1',
+                    'code1',
                 ],
             ),
-            code="example_code",
-            coupon_type="percentage",
-            expiration="time_limit",
+            code='example_code',
+            coupon_type=shared.CouponInputCouponCouponTypeEnum.PERCENTAGE,
+            expiration=shared.CouponInputCouponExpirationEnum.TIME_LIMIT,
             expiration_at=dateutil.parser.isoparse('2022-09-14T23:59:59Z'),
-            frequency="once",
+            frequency=shared.CouponInputCouponFrequencyEnum.ONCE,
             frequency_duration=3,
-            name="coupon1",
+            name='coupon1',
             percentage_rate=25,
             reusable=True,
         ),
     ),
-    code="example_code",
+    code='example_code',
 )
 
 res = s.coupons.update(req)

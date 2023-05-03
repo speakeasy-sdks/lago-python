@@ -34,7 +34,7 @@ s = lago.Lago(
 
 
 req = operations.DownloadInvoiceRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.download(req)
@@ -61,7 +61,7 @@ s = lago.Lago(
 
 
 req = operations.FinalizeInvoiceRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.finalize(req)
@@ -88,7 +88,7 @@ s = lago.Lago(
 
 
 req = operations.FindInvoiceRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.find(req)
@@ -116,12 +116,12 @@ s = lago.Lago(
 
 
 req = operations.FindAllInvoicesRequest(
-    external_customer_id="12345",
+    external_customer_id='12345',
     issuing_date_from=dateutil.parser.parse('2022-07-08').date(),
     issuing_date_to=dateutil.parser.parse('2022-08-09').date(),
     page=2,
     per_page=20,
-    status="finalized",
+    status=operations.FindAllInvoicesStatusEnum.FINALIZED,
 )
 
 res = s.invoices.find_all(req)
@@ -148,7 +148,7 @@ s = lago.Lago(
 
 
 req = operations.RetryPaymentRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.retry(req)
@@ -179,20 +179,20 @@ req = operations.UpdateInvoiceRequest(
         invoice=shared.InvoiceInputInvoice(
             metadata=[
                 shared.InvoiceInputInvoiceMetadata(
-                    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                    key="name",
-                    value="John",
+                    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                    key='name',
+                    value='John',
                 ),
                 shared.InvoiceInputInvoiceMetadata(
-                    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                    key="name",
-                    value="John",
+                    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                    key='name',
+                    value='John',
                 ),
             ],
-            payment_status="succeeded",
+            payment_status=shared.InvoiceInputInvoicePaymentStatusEnum.SUCCEEDED,
         ),
     ),
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.update(req)
@@ -219,7 +219,7 @@ s = lago.Lago(
 
 
 req = operations.RefreshInvoiceRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.void(req)

@@ -32,13 +32,13 @@ s = lago.Lago(
 
 req = shared.EventEstimateFeesInput(
     event=shared.EventEstimateFeesInputEvent(
-        code="code",
-        external_customer_id="654321",
-        external_subscription_id="123456",
+        code='code',
+        external_customer_id='654321',
+        external_subscription_id='123456',
         properties={
-            "hic": "optio",
-            "totam": "beatae",
-            "commodi": "molestiae",
+            "hic": 'optio',
+            "totam": 'beatae',
+            "commodi": 'molestiae',
         },
     ),
 )
@@ -68,19 +68,19 @@ s = lago.Lago(
 
 req = shared.BatchEventInput(
     event=shared.BatchEventInputEvent(
-        code="code",
-        external_customer_id="654321",
+        code='code',
+        external_customer_id='654321',
         external_subscription_ids=[
-            "qui",
-            "impedit",
+            'qui',
+            'impedit',
         ],
         properties={
-            "esse": "ipsum",
-            "excepturi": "aspernatur",
-            "perferendis": "ad",
+            "esse": 'ipsum',
+            "excepturi": 'aspernatur',
+            "perferendis": 'ad',
         },
         timestamp=1669823754,
-        transaction_id="123456",
+        transaction_id='123456',
     ),
 )
 
@@ -109,16 +109,16 @@ s = lago.Lago(
 
 req = shared.EventInput(
     event=shared.EventInputEvent(
-        code="code",
-        external_customer_id="654321",
-        external_subscription_id="123456",
+        code='code',
+        external_customer_id='654321',
+        external_subscription_id='123456',
         properties={
-            "sed": "iste",
-            "dolor": "natus",
-            "laboriosam": "hic",
+            "sed": 'iste',
+            "dolor": 'natus',
+            "laboriosam": 'hic',
         },
         timestamp=1669823754,
-        transaction_id="123456",
+        transaction_id='123456',
     ),
 )
 
@@ -146,7 +146,7 @@ s = lago.Lago(
 
 
 req = operations.FindEventRequest(
-    id="12345",
+    id='12345',
 )
 
 res = s.events.find(req)

@@ -33,27 +33,27 @@ s = lago.Lago(
 req = shared.CreditNoteInput(
     credit_note=shared.CreditNoteInputCreditNote(
         credit_amount_cents=20,
-        description="description",
-        invoice_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+        description='description',
+        invoice_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
         items=[
             shared.CreditNoteInputCreditNoteItems(
                 amount_cents=20,
-                fee_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                fee_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
             ),
             shared.CreditNoteInputCreditNoteItems(
                 amount_cents=20,
-                fee_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                fee_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
             ),
             shared.CreditNoteInputCreditNoteItems(
                 amount_cents=20,
-                fee_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                fee_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
             ),
             shared.CreditNoteInputCreditNoteItems(
                 amount_cents=20,
-                fee_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                fee_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
             ),
         ],
-        reason="fraudulent_charge",
+        reason=shared.CreditNoteInputCreditNoteReasonEnum.FRAUDULENT_CHARGE,
         refund_amount_cents=20,
     ),
 )
@@ -82,7 +82,7 @@ s = lago.Lago(
 
 
 req = operations.DownloadCreditNoteRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.credit_notes.download(req)
@@ -109,7 +109,7 @@ s = lago.Lago(
 
 
 req = operations.FindCreditNoteRequest(
-    id="12345",
+    id='12345',
 )
 
 res = s.credit_notes.find(req)
@@ -136,7 +136,7 @@ s = lago.Lago(
 
 
 req = operations.FindAllCreditNotesRequest(
-    external_customer_id="12345",
+    external_customer_id='12345',
     page=2,
     per_page=20,
 )
@@ -167,10 +167,10 @@ s = lago.Lago(
 req = operations.UpdateCreditNoteRequest(
     credit_note_update_input=shared.CreditNoteUpdateInput(
         credit_note=shared.CreditNoteUpdateInputCreditNote(
-            refund_status="succeeded",
+            refund_status=shared.CreditNoteUpdateInputCreditNoteRefundStatusEnum.SUCCEEDED,
         ),
     ),
-    id="12345",
+    id='12345',
 )
 
 res = s.credit_notes.update(req)
@@ -197,7 +197,7 @@ s = lago.Lago(
 
 
 req = operations.VoidCreditNoteRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.credit_notes.void(req)

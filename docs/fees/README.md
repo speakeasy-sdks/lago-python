@@ -30,7 +30,7 @@ s = lago.Lago(
 
 
 req = operations.FindFeeRequest(
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.fees.find(req)
@@ -58,17 +58,17 @@ s = lago.Lago(
 
 
 req = operations.FindAllFeesRequest(
-    billable_metric_code="bm_code",
+    billable_metric_code='bm_code',
     created_at_from=dateutil.parser.isoparse('2023-03-28T12:21:51Z'),
     created_at_to=dateutil.parser.isoparse('2023-03-28T12:21:51Z'),
-    currency="EUR",
-    external_customer_id="12345",
-    external_subscription_id="12345",
+    currency='EUR',
+    external_customer_id='12345',
+    external_subscription_id='12345',
     failed_at_from=dateutil.parser.isoparse('2023-03-28T12:21:51Z'),
     failed_at_to=dateutil.parser.isoparse('2023-03-28T12:21:51Z'),
-    fee_type="charge",
+    fee_type=operations.FindAllFeesFeeTypeEnum.CHARGE,
     page=2,
-    payment_status="succeeded",
+    payment_status=operations.FindAllFeesPaymentStatusEnum.SUCCEEDED,
     per_page=20,
     refunded_at_from=dateutil.parser.isoparse('2023-03-28T12:21:51Z'),
     refunded_at_to=dateutil.parser.isoparse('2023-03-28T12:21:51Z'),
@@ -102,10 +102,10 @@ s = lago.Lago(
 req = operations.UpdateFeeRequest(
     fee_update_input=shared.FeeUpdateInput(
         invoice=shared.FeeUpdateInputInvoice(
-            payment_status="refunded",
+            payment_status=shared.FeeUpdateInputInvoicePaymentStatusEnum.REFUNDED,
         ),
     ),
-    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.fees.update(req)

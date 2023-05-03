@@ -34,59 +34,59 @@ s = lago.Lago(
 req = shared.PlanInput(
     plan=shared.PlanInputPlan(
         amount_cents=1200,
-        amount_currency="EUR",
+        amount_currency='EUR',
         bill_charges_monthly=False,
         charges=[
             shared.PlanInputPlanCharges(
-                billable_metric_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                charge_model="standard",
+                billable_metric_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                charge_model=shared.PlanInputPlanChargesChargeModelEnum.STANDARD,
                 group_properties=[
                     shared.PlanInputPlanChargesGroupProperties(
-                        group_id="123456",
+                        group_id='123456',
                         values={
-                            "mollitia": "laborum",
-                            "dolores": "dolorem",
-                            "corporis": "explicabo",
+                            "mollitia": 'laborum',
+                            "dolores": 'dolorem',
+                            "corporis": 'explicabo',
                         },
                     ),
                     shared.PlanInputPlanChargesGroupProperties(
-                        group_id="123456",
+                        group_id='123456',
                         values={
-                            "enim": "omnis",
-                            "nemo": "minima",
-                            "excepturi": "accusantium",
-                            "iure": "culpa",
+                            "enim": 'omnis',
+                            "nemo": 'minima',
+                            "excepturi": 'accusantium',
+                            "iure": 'culpa',
                         },
                     ),
                     shared.PlanInputPlanChargesGroupProperties(
-                        group_id="123456",
+                        group_id='123456',
                         values={
-                            "sapiente": "architecto",
-                            "mollitia": "dolorem",
-                            "culpa": "consequuntur",
-                            "repellat": "mollitia",
+                            "sapiente": 'architecto',
+                            "mollitia": 'dolorem',
+                            "culpa": 'consequuntur',
+                            "repellat": 'mollitia',
                         },
                     ),
                     shared.PlanInputPlanChargesGroupProperties(
-                        group_id="123456",
+                        group_id='123456',
                         values={
-                            "numquam": "commodi",
-                            "quam": "molestiae",
-                            "velit": "error",
+                            "numquam": 'commodi',
+                            "quam": 'molestiae',
+                            "velit": 'error',
                         },
                     ),
                 ],
-                id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                id='1a901a90-1a90-1a90-1a90-1a901a901a90',
                 instant=False,
                 properties={
-                    "quis": "vitae",
+                    "quis": 'vitae',
                 },
             ),
         ],
-        code="example_code",
-        description="description",
-        interval="yearly",
-        name="example name",
+        code='example_code',
+        description='description',
+        interval=shared.PlanInputPlanIntervalEnum.YEARLY,
+        name='example name',
         pay_in_advance=True,
         trial_period=2,
     ),
@@ -116,7 +116,7 @@ s = lago.Lago(
 
 
 req = operations.DestroyPlanRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.plans.destroy(req)
@@ -143,7 +143,7 @@ s = lago.Lago(
 
 
 req = operations.FindPlanRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.plans.find(req)
@@ -201,116 +201,116 @@ req = operations.UpdatePlanRequest(
     plan_input=shared.PlanInput(
         plan=shared.PlanInputPlan(
             amount_cents=1200,
-            amount_currency="EUR",
+            amount_currency='EUR',
             bill_charges_monthly=False,
             charges=[
                 shared.PlanInputPlanCharges(
-                    billable_metric_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                    charge_model="graduated",
+                    billable_metric_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                    charge_model=shared.PlanInputPlanChargesChargeModelEnum.GRADUATED,
                     group_properties=[
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "sequi": "tenetur",
-                                "ipsam": "id",
-                                "possimus": "aut",
-                                "quasi": "error",
+                                "sequi": 'tenetur',
+                                "ipsam": 'id',
+                                "possimus": 'aut',
+                                "quasi": 'error',
                             },
                         ),
                     ],
-                    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
                     instant=False,
                     properties={
-                        "laborum": "quasi",
-                        "reiciendis": "voluptatibus",
-                        "vero": "nihil",
-                        "praesentium": "voluptatibus",
+                        "laborum": 'quasi',
+                        "reiciendis": 'voluptatibus',
+                        "vero": 'nihil',
+                        "praesentium": 'voluptatibus',
                     },
                 ),
                 shared.PlanInputPlanCharges(
-                    billable_metric_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                    charge_model="standard",
+                    billable_metric_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                    charge_model=shared.PlanInputPlanChargesChargeModelEnum.STANDARD,
                     group_properties=[
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "cum": "perferendis",
-                                "doloremque": "reprehenderit",
+                                "cum": 'perferendis',
+                                "doloremque": 'reprehenderit',
                             },
                         ),
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "maiores": "dicta",
-                                "corporis": "dolore",
+                                "maiores": 'dicta',
+                                "corporis": 'dolore',
                             },
                         ),
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "dicta": "harum",
-                                "enim": "accusamus",
+                                "dicta": 'harum',
+                                "enim": 'accusamus',
                             },
                         ),
                     ],
-                    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
                     instant=False,
                     properties={
-                        "repudiandae": "quae",
-                        "ipsum": "quidem",
+                        "repudiandae": 'quae',
+                        "ipsum": 'quidem',
                     },
                 ),
                 shared.PlanInputPlanCharges(
-                    billable_metric_id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                    charge_model="package",
+                    billable_metric_id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                    charge_model=shared.PlanInputPlanChargesChargeModelEnum.PACKAGE,
                     group_properties=[
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "modi": "praesentium",
-                                "rem": "voluptates",
-                                "quasi": "repudiandae",
-                                "sint": "veritatis",
+                                "modi": 'praesentium',
+                                "rem": 'voluptates',
+                                "quasi": 'repudiandae',
+                                "sint": 'veritatis',
                             },
                         ),
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "incidunt": "enim",
-                                "consequatur": "est",
-                                "quibusdam": "explicabo",
-                                "deserunt": "distinctio",
+                                "incidunt": 'enim',
+                                "consequatur": 'est',
+                                "quibusdam": 'explicabo',
+                                "deserunt": 'distinctio',
                             },
                         ),
                         shared.PlanInputPlanChargesGroupProperties(
-                            group_id="123456",
+                            group_id='123456',
                             values={
-                                "labore": "modi",
-                                "qui": "aliquid",
-                                "cupiditate": "quos",
-                                "perferendis": "magni",
+                                "labore": 'modi',
+                                "qui": 'aliquid',
+                                "cupiditate": 'quos',
+                                "perferendis": 'magni',
                             },
                         ),
                     ],
-                    id="1a901a90-1a90-1a90-1a90-1a901a901a90",
+                    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
                     instant=False,
                     properties={
-                        "ipsam": "alias",
-                        "fugit": "dolorum",
-                        "excepturi": "tempora",
-                        "facilis": "tempore",
+                        "ipsam": 'alias',
+                        "fugit": 'dolorum',
+                        "excepturi": 'tempora',
+                        "facilis": 'tempore',
                     },
                 ),
             ],
-            code="example_code",
-            description="description",
-            interval="weekly",
-            name="example name",
+            code='example_code',
+            description='description',
+            interval=shared.PlanInputPlanIntervalEnum.WEEKLY,
+            name='example name',
             pay_in_advance=True,
             trial_period=2,
         ),
     ),
-    code="example_code",
+    code='example_code',
 )
 
 res = s.plans.update(req)

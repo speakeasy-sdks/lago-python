@@ -34,10 +34,10 @@ s = lago.Lago(
 
 req = shared.AppliedAddOnInput(
     applied_add_on=shared.AppliedAddOnInputAppliedAddOn(
-        add_on_code="code",
+        add_on_code='code',
         amount_cents=1200,
-        amount_currency="EUR",
-        external_customer_id="1234567",
+        amount_currency='EUR',
+        external_customer_id='1234567',
     ),
 )
 
@@ -67,10 +67,10 @@ s = lago.Lago(
 req = shared.AddOnInput(
     add_on=shared.AddOnInputAddOn(
         amount_cents=1200,
-        amount_currency="EUR",
-        code="example_code",
-        description="description",
-        name="example name",
+        amount_currency='EUR',
+        code='example_code',
+        description='description',
+        name='example name',
     ),
 )
 
@@ -98,7 +98,7 @@ s = lago.Lago(
 
 
 req = operations.DestroyAddOnRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.add_ons.destroy(req)
@@ -125,7 +125,7 @@ s = lago.Lago(
 
 
 req = operations.FindAddOnRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.add_ons.find(req)
@@ -183,13 +183,13 @@ req = operations.UpdateAddOnRequest(
     add_on_input=shared.AddOnInput(
         add_on=shared.AddOnInputAddOn(
             amount_cents=1200,
-            amount_currency="EUR",
-            code="example_code",
-            description="description",
-            name="example name",
+            amount_currency='EUR',
+            code='example_code',
+            description='description',
+            name='example name',
         ),
     ),
-    code="example_code",
+    code='example_code',
 )
 
 res = s.add_ons.update(req)

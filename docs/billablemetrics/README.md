@@ -34,26 +34,26 @@ s = lago.Lago(
 
 req = shared.BillableMetricInput(
     billable_metric=shared.BillableMetricInputBillableMetric(
-        aggregation_type="max_agg",
-        code="example_code",
-        description="description",
-        field_name="amount",
+        aggregation_type=shared.BillableMetricInputBillableMetricAggregationTypeEnum.MAX_AGG,
+        code='example_code',
+        description='description',
+        field_name='amount',
         group=shared.BillableMetricGroup(
-            key="region",
+            key='region',
             values=[
                 {
-                    "unde": "nulla",
-                    "corrupti": "illum",
-                    "vel": "error",
-                    "deserunt": "suscipit",
+                    "unde": 'nulla',
+                    "corrupti": 'illum',
+                    "vel": 'error',
+                    "deserunt": 'suscipit',
                 },
-                "magnam",
+                'magnam',
                 {
-                    "delectus": "tempora",
+                    "delectus": 'tempora',
                 },
             ],
         ),
-        name="bm1",
+        name='bm1',
     ),
 )
 
@@ -81,7 +81,7 @@ s = lago.Lago(
 
 
 req = operations.DestroyBillableMetricRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.billable_metrics.destroy(req)
@@ -108,7 +108,7 @@ s = lago.Lago(
 
 
 req = operations.FindBillableMetricRequest(
-    code="example_code",
+    code='example_code',
 )
 
 res = s.billable_metrics.find(req)
@@ -163,7 +163,7 @@ s = lago.Lago(
 
 
 req = operations.FindAllBillableMetricGroupsRequest(
-    code="example_code",
+    code='example_code',
     page=2,
     per_page=20,
 )
@@ -194,26 +194,26 @@ s = lago.Lago(
 req = operations.UpdateBillableMetricRequest(
     billable_metric_input=shared.BillableMetricInput(
         billable_metric=shared.BillableMetricInputBillableMetric(
-            aggregation_type="sum_agg",
-            code="example_code",
-            description="description",
-            field_name="amount",
+            aggregation_type=shared.BillableMetricInputBillableMetricAggregationTypeEnum.SUM_AGG,
+            code='example_code',
+            description='description',
+            field_name='amount',
             group=shared.BillableMetricGroup(
-                key="region",
+                key='region',
                 values=[
                     {
-                        "voluptatum": "iusto",
-                        "excepturi": "nisi",
-                        "recusandae": "temporibus",
-                        "ab": "quis",
+                        "voluptatum": 'iusto',
+                        "excepturi": 'nisi',
+                        "recusandae": 'temporibus',
+                        "ab": 'quis',
                     },
-                    "deserunt",
+                    'deserunt',
                 ],
             ),
-            name="bm1",
+            name='bm1',
         ),
     ),
-    code="example_code",
+    code='example_code',
 )
 
 res = s.billable_metrics.update(req)

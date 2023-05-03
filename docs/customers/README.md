@@ -35,35 +35,35 @@ s = lago.Lago(
 
 req = shared.CustomerInput(
     customer=shared.CustomerInputCustomer(
-        address_line1="address1",
-        address_line2="address2",
+        address_line1='address1',
+        address_line2='address2',
         billing_configuration={
-            "porro": "dolorum",
-            "dicta": "nam",
-            "officia": "occaecati",
+            "porro": 'dolorum',
+            "dicta": 'nam',
+            "officia": 'occaecati',
         },
-        city="City",
-        country="CZ",
-        currency="EUR",
-        email="example@example.com",
-        external_id="12345",
-        lago_url="https://lago.url",
-        legal_name="name1",
-        legal_number="10000",
+        city='City',
+        country='CZ',
+        currency='EUR',
+        email='example@example.com',
+        external_id='12345',
+        lago_url='https://lago.url',
+        legal_name='name1',
+        legal_number='10000',
         metadata=[
             shared.CustomerInputCustomerMetadata(
                 display_in_invoice=False,
-                id="1a901a90-1a90-1a90-1a90-1a901a901a90",
-                key="name",
-                value="John",
+                id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                key='name',
+                value='John',
             ),
         ],
-        name="John Doe",
-        phone="+3551234567",
-        state="state1",
-        timezone="Europe/Paris",
-        url="https://example.com",
-        zipcode="10000",
+        name='John Doe',
+        phone='+3551234567',
+        state='state1',
+        timezone='Europe/Paris',
+        url='https://example.com',
+        zipcode='10000',
     ),
 )
 
@@ -91,8 +91,8 @@ s = lago.Lago(
 
 
 req = operations.FindCustomerCurrentUsageRequest(
-    customer_external_id="12345",
-    external_subscription_id="54321",
+    customer_external_id='12345',
+    external_subscription_id='54321',
 )
 
 res = s.customers.current_usage(req)
@@ -119,8 +119,8 @@ s = lago.Lago(
 
 
 req = operations.DeleteAppliedCouponRequest(
-    applied_coupon_id="54321",
-    customer_external_id="12345",
+    applied_coupon_id='54321',
+    customer_external_id='12345',
 )
 
 res = s.customers.delete_applied_coupon(req)
@@ -147,7 +147,7 @@ s = lago.Lago(
 
 
 req = operations.DeleteCustomerRequest(
-    external_id="12345",
+    external_id='12345',
 )
 
 res = s.customers.destroy(req)
@@ -174,7 +174,7 @@ s = lago.Lago(
 
 
 req = operations.FindCustomerRequest(
-    external_id="12345",
+    external_id='12345',
 )
 
 res = s.customers.find(req)
@@ -229,7 +229,7 @@ s = lago.Lago(
 
 
 req = operations.GetCustomerPortalURLRequest(
-    customer_external_id="12345",
+    customer_external_id='12345',
 )
 
 res = s.customers.portal_url(req)

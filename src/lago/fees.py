@@ -24,6 +24,7 @@ class Fees:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def find(self, request: operations.FindFeeRequest) -> operations.FindFeeResponse:
         r"""Find fee by ID
         Return a single fee
@@ -55,6 +56,7 @@ class Fees:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllFeesRequest) -> operations.FindAllFeesResponse:
         r"""Find all fees
         Find all fees of an organization and filter them
@@ -87,6 +89,7 @@ class Fees:
 
         return res
 
+    
     def update(self, request: operations.UpdateFeeRequest) -> operations.UpdateFeeResponse:
         r"""Update an existing fee
         Update an existing fee

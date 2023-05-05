@@ -26,7 +26,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.OrganizationInput(
     organization=shared.OrganizationInputOrganization(
         address_line1='address1',

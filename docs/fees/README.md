@@ -28,7 +28,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindFeeRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
@@ -55,7 +54,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllFeesRequest(
     billable_metric_code='bm_code',
@@ -97,7 +95,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateFeeRequest(
     fee_update_input=shared.FeeUpdateInput(

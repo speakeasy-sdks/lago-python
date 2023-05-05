@@ -24,6 +24,7 @@ class AddOns:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def apply(self, request: shared.AppliedAddOnInput) -> operations.ApplyAddOnResponse:
         r"""Apply an add-on to a customer
         Apply an add-on to a customer
@@ -69,6 +70,7 @@ class AddOns:
 
         return res
 
+    
     def create(self, request: shared.AddOnInput) -> operations.CreateAddOnResponse:
         r"""Create a new add-on
         Create a new add-on
@@ -110,6 +112,7 @@ class AddOns:
 
         return res
 
+    
     def destroy(self, request: operations.DestroyAddOnRequest) -> operations.DestroyAddOnResponse:
         r"""Delete an add-on
         Delete an add-on
@@ -141,6 +144,7 @@ class AddOns:
 
         return res
 
+    
     def find(self, request: operations.FindAddOnRequest) -> operations.FindAddOnResponse:
         r"""Find add-on by code
         Return a single add-on
@@ -172,6 +176,7 @@ class AddOns:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllAddOnsRequest) -> operations.FindAllAddOnsResponse:
         r"""Find add-ons
         Find all add-ons in certain organisation
@@ -200,6 +205,7 @@ class AddOns:
 
         return res
 
+    
     def update(self, request: operations.UpdateAddOnRequest) -> operations.UpdateAddOnResponse:
         r"""Update an existing add-on
         Update an existing add-on by code

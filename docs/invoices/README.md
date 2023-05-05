@@ -8,17 +8,17 @@ Find out more
 <https://doc.getlago.com/docs/api/invoices/invoice-object>
 ### Available Operations
 
-* [download](#download) - Download an existing invoice
-* [finalize](#finalize) - Finalize a draft invoice
-* [find](#find) - Find invoice by ID
-* [find_all](#find_all) - Find all invoices
+* [refresh](#refresh) - Refresh a draft invoice
 * [retry](#retry) - Retry invoice payment
-* [update](#update) - Update an existing invoice status
-* [void](#void) - Refresh a draft invoice
+* [void](#void) - Finalize a draft invoice
+* [void](#void) - Download an existing invoice
+* [void](#void) - Update an existing invoice status
+* [void](#void) - Find invoice by ID
+* [void](#void) - Find all invoices
 
-## download
+## refresh
 
-Download an existing invoice
+Refresh a draft invoice
 
 ### Example Usage
 
@@ -32,101 +32,13 @@ s = lago.Lago(
     ),
 )
 
-
-req = operations.DownloadInvoiceRequest(
+req = operations.RefreshInvoiceRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
-res = s.invoices.download(req)
+res = s.invoices.refresh(req)
 
 if res.invoice is not None:
-    # handle response
-```
-
-## finalize
-
-Finalize a draft invoice
-
-### Example Usage
-
-```python
-import lago
-from lago.models import operations
-
-s = lago.Lago(
-    security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
-    ),
-)
-
-
-req = operations.FinalizeInvoiceRequest(
-    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
-)
-
-res = s.invoices.finalize(req)
-
-if res.invoice is not None:
-    # handle response
-```
-
-## find
-
-Return a single invoice
-
-### Example Usage
-
-```python
-import lago
-from lago.models import operations
-
-s = lago.Lago(
-    security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
-    ),
-)
-
-
-req = operations.FindInvoiceRequest(
-    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
-)
-
-res = s.invoices.find(req)
-
-if res.invoice is not None:
-    # handle response
-```
-
-## find_all
-
-Find all invoices in certain organisation
-
-### Example Usage
-
-```python
-import lago
-import dateutil.parser
-from lago.models import operations
-
-s = lago.Lago(
-    security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
-    ),
-)
-
-
-req = operations.FindAllInvoicesRequest(
-    external_customer_id='12345',
-    issuing_date_from=dateutil.parser.parse('2022-07-08').date(),
-    issuing_date_to=dateutil.parser.parse('2022-08-09').date(),
-    page=2,
-    per_page=20,
-    status=operations.FindAllInvoicesStatusEnum.FINALIZED,
-)
-
-res = s.invoices.find_all(req)
-
-if res.invoices is not None:
     # handle response
 ```
 
@@ -146,7 +58,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.RetryPaymentRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
@@ -157,7 +68,59 @@ if res.status_code == 200:
     # handle response
 ```
 
-## update
+## void
+
+Finalize a draft invoice
+
+### Example Usage
+
+```python
+import lago
+from lago.models import operations
+
+s = lago.Lago(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+req = operations.FinalizeInvoiceRequest(
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+)
+
+res = s.invoices.void(req)
+
+if res.invoice is not None:
+    # handle response
+```
+
+## void
+
+Download an existing invoice
+
+### Example Usage
+
+```python
+import lago
+from lago.models import operations
+
+s = lago.Lago(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+req = operations.DownloadInvoiceRequest(
+    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+)
+
+res = s.invoices.void(req)
+
+if res.invoice is not None:
+    # handle response
+```
+
+## void
 
 Update an existing invoice
 
@@ -173,11 +136,15 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.UpdateInvoiceRequest(
     invoice_input=shared.InvoiceInput(
         invoice=shared.InvoiceInputInvoice(
             metadata=[
+                shared.InvoiceInputInvoiceMetadata(
+                    id='1a901a90-1a90-1a90-1a90-1a901a901a90',
+                    key='name',
+                    value='John',
+                ),
                 shared.InvoiceInputInvoiceMetadata(
                     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
                     key='name',
@@ -195,7 +162,7 @@ req = operations.UpdateInvoiceRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
-res = s.invoices.update(req)
+res = s.invoices.void(req)
 
 if res.invoice is not None:
     # handle response
@@ -203,7 +170,7 @@ if res.invoice is not None:
 
 ## void
 
-Refresh a draft invoice
+Return a single invoice
 
 ### Example Usage
 
@@ -217,13 +184,44 @@ s = lago.Lago(
     ),
 )
 
-
-req = operations.RefreshInvoiceRequest(
+req = operations.FindInvoiceRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
 res = s.invoices.void(req)
 
 if res.invoice is not None:
+    # handle response
+```
+
+## void
+
+Find all invoices in certain organisation
+
+### Example Usage
+
+```python
+import lago
+import dateutil.parser
+from lago.models import operations
+
+s = lago.Lago(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+req = operations.FindAllInvoicesRequest(
+    external_customer_id='12345',
+    issuing_date_from=dateutil.parser.parse('2022-07-08').date(),
+    issuing_date_to=dateutil.parser.parse('2022-08-09').date(),
+    page=2,
+    per_page=20,
+    status=operations.FindAllInvoicesStatusEnum.DRAFT,
+)
+
+res = s.invoices.void(req)
+
+if res.invoices is not None:
     # handle response
 ```

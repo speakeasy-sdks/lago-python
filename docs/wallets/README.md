@@ -33,7 +33,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.WalletInput(
     wallet=shared.WalletInputWallet(
         currency='EUR',
@@ -68,7 +67,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.WalletTransactionInput(
     wallet_transaction=shared.WalletTransactionInputWalletTransaction(
         granted_credits=10,
@@ -99,7 +97,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DestroyWalletRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
@@ -126,7 +123,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindWalletRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
@@ -152,7 +148,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllWalletsRequest(
     external_customer_id='12345',
@@ -181,7 +176,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllWalletTransactionsRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
@@ -213,7 +207,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateWalletRequest(
     wallet_update_input=shared.WalletUpdateInput(

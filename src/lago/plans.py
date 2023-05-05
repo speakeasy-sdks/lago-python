@@ -24,6 +24,7 @@ class Plans:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: shared.PlanInput) -> operations.CreatePlanResponse:
         r"""Create a new plan
         Create a new plan
@@ -69,6 +70,7 @@ class Plans:
 
         return res
 
+    
     def destroy(self, request: operations.DestroyPlanRequest) -> operations.DestroyPlanResponse:
         r"""Delete a plan
         Delete a plan
@@ -100,6 +102,7 @@ class Plans:
 
         return res
 
+    
     def find(self, request: operations.FindPlanRequest) -> operations.FindPlanResponse:
         r"""Fin plan by code
         Return a single plan
@@ -131,6 +134,7 @@ class Plans:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllPlansRequest) -> operations.FindAllPlansResponse:
         r"""Find plans
         Find all plans in certain organisation
@@ -159,6 +163,7 @@ class Plans:
 
         return res
 
+    
     def update(self, request: operations.UpdatePlanRequest) -> operations.UpdatePlanResponse:
         r"""Update an existing plan
         Update an existing plan by code

@@ -24,6 +24,7 @@ class Organizations:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def update(self, request: shared.OrganizationInput) -> operations.UpdateOrganizationResponse:
         r"""Update an existing Organization
         Update an existing organization

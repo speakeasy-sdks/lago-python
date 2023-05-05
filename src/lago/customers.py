@@ -24,6 +24,7 @@ class Customers:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: shared.CustomerInput) -> operations.CreateCustomerResponse:
         r"""Create a customer
         Create a new customer
@@ -65,6 +66,7 @@ class Customers:
 
         return res
 
+    
     def current_usage(self, request: operations.FindCustomerCurrentUsageRequest) -> operations.FindCustomerCurrentUsageResponse:
         r"""Find customer current usage
         Return a customer current usage
@@ -97,6 +99,7 @@ class Customers:
 
         return res
 
+    
     def delete_applied_coupon(self, request: operations.DeleteAppliedCouponRequest) -> operations.DeleteAppliedCouponResponse:
         r"""Delete customer's appplied coupon
         Delete customer's appplied coupon
@@ -128,6 +131,7 @@ class Customers:
 
         return res
 
+    
     def destroy(self, request: operations.DeleteCustomerRequest) -> operations.DeleteCustomerResponse:
         r"""Delete a customer
         Return the deleted customer
@@ -159,6 +163,7 @@ class Customers:
 
         return res
 
+    
     def find(self, request: operations.FindCustomerRequest) -> operations.FindCustomerResponse:
         r"""Find customer by external ID
         Return a single customer
@@ -190,6 +195,7 @@ class Customers:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllCustomersRequest) -> operations.FindAllCustomersResponse:
         r"""Find customers
         Find all customers in certain organisation
@@ -218,6 +224,7 @@ class Customers:
 
         return res
 
+    
     def portal_url(self, request: operations.GetCustomerPortalURLRequest) -> operations.GetCustomerPortalURLResponse:
         r"""Get customer portal URL
         Get customer portal URL

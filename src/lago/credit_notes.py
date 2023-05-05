@@ -22,6 +22,7 @@ class CreditNotes:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: shared.CreditNoteInput) -> operations.CreateCreditNoteResponse:
         r"""Create a new Credit note
         Create a new credit note
@@ -63,6 +64,7 @@ class CreditNotes:
 
         return res
 
+    
     def download(self, request: operations.DownloadCreditNoteRequest) -> operations.DownloadCreditNoteResponse:
         r"""Download an existing credit note
         Download an existing credit note
@@ -94,6 +96,7 @@ class CreditNotes:
 
         return res
 
+    
     def find(self, request: operations.FindCreditNoteRequest) -> operations.FindCreditNoteResponse:
         r"""Find credit note
         Return a single credit note
@@ -125,6 +128,7 @@ class CreditNotes:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllCreditNotesRequest) -> operations.FindAllCreditNotesResponse:
         r"""Find Credit notes
         Find all credit notes in certain organisation
@@ -153,6 +157,7 @@ class CreditNotes:
 
         return res
 
+    
     def update(self, request: operations.UpdateCreditNoteRequest) -> operations.UpdateCreditNoteResponse:
         r"""Update an existing credit note
         Update an existing credit note
@@ -198,6 +203,7 @@ class CreditNotes:
 
         return res
 
+    
     def void(self, request: operations.VoidCreditNoteRequest) -> operations.VoidCreditNoteResponse:
         r"""Void existing credit note
         Void an existing credit note

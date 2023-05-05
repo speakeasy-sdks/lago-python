@@ -32,7 +32,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.CustomerInput(
     customer=shared.CustomerInputCustomer(
         address_line1='address1',
@@ -89,7 +88,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindCustomerCurrentUsageRequest(
     customer_external_id='12345',
     external_subscription_id='54321',
@@ -116,7 +114,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.DeleteAppliedCouponRequest(
     applied_coupon_id='54321',
@@ -145,7 +142,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DeleteCustomerRequest(
     external_id='12345',
 )
@@ -171,7 +167,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindCustomerRequest(
     external_id='12345',
@@ -199,7 +194,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindAllCustomersRequest(
     page=2,
     per_page=20,
@@ -226,7 +220,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.GetCustomerPortalURLRequest(
     customer_external_id='12345',

@@ -24,44 +24,14 @@ class Invoices:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def download(self, request: operations.DownloadInvoiceRequest) -> operations.DownloadInvoiceResponse:
-        r"""Download an existing invoice
-        Download an existing invoice
+    
+    def refresh(self, request: operations.RefreshInvoiceRequest) -> operations.RefreshInvoiceResponse:
+        r"""Refresh a draft invoice
+        Refresh a draft invoice
         """
         base_url = self._server_url
         
-        url = utils.generate_url(operations.DownloadInvoiceRequest, base_url, '/invoices/{id}/download', request)
-        
-        
-        client = self._security_client
-        
-        http_res = client.request('POST', url)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DownloadInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.Invoice])
-                res.invoice = out
-        elif http_res.status_code == 401:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseUnauthorized])
-                res.api_response_unauthorized = out
-        elif http_res.status_code == 404:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseNotFound])
-                res.api_response_not_found = out
-
-        return res
-
-    def finalize(self, request: operations.FinalizeInvoiceRequest) -> operations.FinalizeInvoiceResponse:
-        r"""Finalize a draft invoice
-        Finalize a draft invoice
-        """
-        base_url = self._server_url
-        
-        url = utils.generate_url(operations.FinalizeInvoiceRequest, base_url, '/invoices/{id}/finalize', request)
+        url = utils.generate_url(operations.RefreshInvoiceRequest, base_url, '/invoices/{id}/refresh', request)
         
         
         client = self._security_client
@@ -69,7 +39,7 @@ class Invoices:
         http_res = client.request('PUT', url)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.FinalizeInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RefreshInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -86,65 +56,7 @@ class Invoices:
 
         return res
 
-    def find(self, request: operations.FindInvoiceRequest) -> operations.FindInvoiceResponse:
-        r"""Find invoice by ID
-        Return a single invoice
-        """
-        base_url = self._server_url
-        
-        url = utils.generate_url(operations.FindInvoiceRequest, base_url, '/invoices/{id}', request)
-        
-        
-        client = self._security_client
-        
-        http_res = client.request('GET', url)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.FindInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.Invoice])
-                res.invoice = out
-        elif http_res.status_code == 401:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseUnauthorized])
-                res.api_response_unauthorized = out
-        elif http_res.status_code == 404:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseNotFound])
-                res.api_response_not_found = out
-
-        return res
-
-    def find_all(self, request: operations.FindAllInvoicesRequest) -> operations.FindAllInvoicesResponse:
-        r"""Find all invoices
-        Find all invoices in certain organisation
-        """
-        base_url = self._server_url
-        
-        url = base_url.removesuffix('/') + '/invoices'
-        
-        query_params = utils.get_query_params(operations.FindAllInvoicesRequest, request)
-        
-        client = self._security_client
-        
-        http_res = client.request('GET', url, params=query_params)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.FindAllInvoicesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.Invoices])
-                res.invoices = out
-        elif http_res.status_code == 401:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseUnauthorized])
-                res.api_response_unauthorized = out
-
-        return res
-
+    
     def retry(self, request: operations.RetryPaymentRequest) -> operations.RetryPaymentResponse:
         r"""Retry invoice payment
         Retry invoice payment
@@ -178,7 +90,72 @@ class Invoices:
 
         return res
 
-    def update(self, request: operations.UpdateInvoiceRequest) -> operations.UpdateInvoiceResponse:
+    
+    def void(self, request: operations.FinalizeInvoiceRequest) -> operations.FinalizeInvoiceResponse:
+        r"""Finalize a draft invoice
+        Finalize a draft invoice
+        """
+        base_url = self._server_url
+        
+        url = utils.generate_url(operations.FinalizeInvoiceRequest, base_url, '/invoices/{id}/finalize', request)
+        
+        
+        client = self._security_client
+        
+        http_res = client.request('PUT', url)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.FinalizeInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.Invoice])
+                res.invoice = out
+        elif http_res.status_code == 401:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseUnauthorized])
+                res.api_response_unauthorized = out
+        elif http_res.status_code == 404:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseNotFound])
+                res.api_response_not_found = out
+
+        return res
+
+    
+    def void(self, request: operations.DownloadInvoiceRequest) -> operations.DownloadInvoiceResponse:
+        r"""Download an existing invoice
+        Download an existing invoice
+        """
+        base_url = self._server_url
+        
+        url = utils.generate_url(operations.DownloadInvoiceRequest, base_url, '/invoices/{id}/download', request)
+        
+        
+        client = self._security_client
+        
+        http_res = client.request('POST', url)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.DownloadInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.Invoice])
+                res.invoice = out
+        elif http_res.status_code == 401:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseUnauthorized])
+                res.api_response_unauthorized = out
+        elif http_res.status_code == 404:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseNotFound])
+                res.api_response_not_found = out
+
+        return res
+
+    
+    def void(self, request: operations.UpdateInvoiceRequest) -> operations.UpdateInvoiceResponse:
         r"""Update an existing invoice status
         Update an existing invoice
         """
@@ -223,21 +200,22 @@ class Invoices:
 
         return res
 
-    def void(self, request: operations.RefreshInvoiceRequest) -> operations.RefreshInvoiceResponse:
-        r"""Refresh a draft invoice
-        Refresh a draft invoice
+    
+    def void(self, request: operations.FindInvoiceRequest) -> operations.FindInvoiceResponse:
+        r"""Find invoice by ID
+        Return a single invoice
         """
         base_url = self._server_url
         
-        url = utils.generate_url(operations.RefreshInvoiceRequest, base_url, '/invoices/{id}/refresh', request)
+        url = utils.generate_url(operations.FindInvoiceRequest, base_url, '/invoices/{id}', request)
         
         
         client = self._security_client
         
-        http_res = client.request('PUT', url)
+        http_res = client.request('GET', url)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.RefreshInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.FindInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -251,6 +229,35 @@ class Invoices:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseNotFound])
                 res.api_response_not_found = out
+
+        return res
+
+    
+    def void(self, request: operations.FindAllInvoicesRequest) -> operations.FindAllInvoicesResponse:
+        r"""Find all invoices
+        Find all invoices in certain organisation
+        """
+        base_url = self._server_url
+        
+        url = base_url.removesuffix('/') + '/invoices'
+        
+        query_params = utils.get_query_params(operations.FindAllInvoicesRequest, request)
+        
+        client = self._security_client
+        
+        http_res = client.request('GET', url, params=query_params)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.FindAllInvoicesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.Invoices])
+                res.invoices = out
+        elif http_res.status_code == 401:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponseUnauthorized])
+                res.api_response_unauthorized = out
 
         return res
 

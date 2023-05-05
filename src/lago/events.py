@@ -24,6 +24,7 @@ class Events:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def estimate_fees(self, request: shared.EventEstimateFeesInput) -> operations.EventEstimateFeesResponse:
         r"""Estimate fees for an instant charge
         Estimate the fees that would be created after reception of an event for a billable metric attached to one or multiple instant charges
@@ -69,6 +70,7 @@ class Events:
 
         return res
 
+    
     def batch_create(self, request: shared.BatchEventInput) -> operations.CreateBatchEventsResponse:
         r"""Create batch events
         Create batch events
@@ -108,6 +110,7 @@ class Events:
 
         return res
 
+    
     def create(self, request: shared.EventInput) -> operations.CreateEventResponse:
         r"""Create a new event
         Create a new event
@@ -147,6 +150,7 @@ class Events:
 
         return res
 
+    
     def find(self, request: operations.FindEventRequest) -> operations.FindEventResponse:
         r"""Find event by transaction ID
         Return a single event

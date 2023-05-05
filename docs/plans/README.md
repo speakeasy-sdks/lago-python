@@ -30,7 +30,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.PlanInput(
     plan=shared.PlanInputPlan(
         amount_cents=1200,
@@ -114,7 +113,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DestroyPlanRequest(
     code='example_code',
 )
@@ -140,7 +138,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindPlanRequest(
     code='example_code',
@@ -168,7 +165,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindAllPlansRequest(
     page=2,
     per_page=20,
@@ -195,7 +191,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdatePlanRequest(
     plan_input=shared.PlanInput(

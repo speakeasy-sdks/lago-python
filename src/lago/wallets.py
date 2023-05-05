@@ -24,6 +24,7 @@ class Wallets:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: shared.WalletInput) -> operations.CreateWalletResponse:
         r"""Create a new wallet
         Create a new wallet
@@ -65,6 +66,7 @@ class Wallets:
 
         return res
 
+    
     def create_transaction(self, request: shared.WalletTransactionInput) -> operations.CreateWalletTransactionResponse:
         r"""Create a new wallet transaction
         Create a new wallet transaction
@@ -106,6 +108,7 @@ class Wallets:
 
         return res
 
+    
     def destroy(self, request: operations.DestroyWalletRequest) -> operations.DestroyWalletResponse:
         r"""Delete a wallet
         Delete a wallet
@@ -141,6 +144,7 @@ class Wallets:
 
         return res
 
+    
     def find(self, request: operations.FindWalletRequest) -> operations.FindWalletResponse:
         r"""Find wallet
         Return a wallet
@@ -172,6 +176,7 @@ class Wallets:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllWalletsRequest) -> operations.FindAllWalletsResponse:
         r"""Find wallets
         Find all wallets for certain customer
@@ -200,6 +205,7 @@ class Wallets:
 
         return res
 
+    
     def find_all_transactions(self, request: operations.FindAllWalletTransactionsRequest) -> operations.FindAllWalletTransactionsResponse:
         r"""Find wallet transactions
         Find all wallet transactions for certain wallet
@@ -232,6 +238,7 @@ class Wallets:
 
         return res
 
+    
     def update(self, request: operations.UpdateWalletRequest) -> operations.UpdateWalletResponse:
         r"""Update an existing wallet
         Update an existing wallet

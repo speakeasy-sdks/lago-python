@@ -58,13 +58,13 @@ src/lago/models/operations/findevent.py
 src/lago/models/operations/findfee.py
 src/lago/models/operations/findallfees.py
 src/lago/models/operations/updatefee.py
-src/lago/models/operations/downloadinvoice.py
+src/lago/models/operations/refreshinvoice.py
+src/lago/models/operations/retrypayment.py
 src/lago/models/operations/finalizeinvoice.py
+src/lago/models/operations/downloadinvoice.py
+src/lago/models/operations/updateinvoice.py
 src/lago/models/operations/findinvoice.py
 src/lago/models/operations/findallinvoices.py
-src/lago/models/operations/retrypayment.py
-src/lago/models/operations/updateinvoice.py
-src/lago/models/operations/refreshinvoice.py
 src/lago/models/operations/updateorganization.py
 src/lago/models/operations/createplan.py
 src/lago/models/operations/destroyplan.py
@@ -141,8 +141,8 @@ src/lago/models/shared/invoice.py
 src/lago/models/shared/invoiceobject.py
 src/lago/models/shared/subscriptionobject.py
 src/lago/models/shared/invoicemetadataobject.py
-src/lago/models/shared/invoices.py
 src/lago/models/shared/invoiceinput.py
+src/lago/models/shared/invoices.py
 src/lago/models/shared/organization.py
 src/lago/models/shared/organizationobject.py
 src/lago/models/shared/billingconfigurationorganization.py

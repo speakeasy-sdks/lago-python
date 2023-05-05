@@ -31,7 +31,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.AppliedAddOnInput(
     applied_add_on=shared.AppliedAddOnInputAppliedAddOn(
         add_on_code='code',
@@ -62,7 +61,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = shared.AddOnInput(
     add_on=shared.AddOnInputAddOn(
@@ -96,7 +94,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DestroyAddOnRequest(
     code='example_code',
 )
@@ -122,7 +119,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAddOnRequest(
     code='example_code',
@@ -150,7 +146,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindAllAddOnsRequest(
     page=2,
     per_page=20,
@@ -177,7 +172,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateAddOnRequest(
     add_on_input=shared.AddOnInput(

@@ -32,7 +32,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindAllAppliedCouponsRequest(
     external_customer_id='12345',
     page=2,
@@ -61,7 +60,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = shared.AppliedCouponInput(
     applied_coupon=shared.AppliedCouponInputAppliedCoupon(
@@ -97,7 +95,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = shared.CouponInput(
     coupon=shared.CouponInputCoupon(
@@ -145,7 +142,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DestroyCouponRequest(
     code='example_code',
 )
@@ -172,7 +168,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindCouponRequest(
     code='example_code',
 )
@@ -198,7 +193,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllCouponsRequest(
     page=2,
@@ -227,7 +221,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateCouponRequest(
     coupon_input=shared.CouponInput(

@@ -30,7 +30,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.SubscriptionCreateInput(
     subscription=shared.SubscriptionCreateInputSubscription(
         billing_time=shared.SubscriptionCreateInputSubscriptionBillingTimeEnum.ANNIVERSARY,
@@ -64,7 +63,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DestroySubscriptionRequest(
     external_id='example_id',
 )
@@ -90,7 +88,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllSubscriptionsRequest(
     external_customer_id='12345',
@@ -120,7 +117,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateSubscriptionRequest(
     subscription_update_input=shared.SubscriptionUpdateInput(

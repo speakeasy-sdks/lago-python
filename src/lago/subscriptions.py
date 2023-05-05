@@ -24,6 +24,7 @@ class Subscriptions:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: shared.SubscriptionCreateInput) -> operations.CreateSubscriptionResponse:
         r"""Assign a plan to a customer
         Assign a plan to a customer
@@ -69,6 +70,7 @@ class Subscriptions:
 
         return res
 
+    
     def destroy(self, request: operations.DestroySubscriptionRequest) -> operations.DestroySubscriptionResponse:
         r"""Terminate a subscription
         Terminate a subscription
@@ -104,6 +106,7 @@ class Subscriptions:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllSubscriptionsRequest) -> operations.FindAllSubscriptionsResponse:
         r"""Find subscriptions
         Find all suscriptions for certain customer
@@ -136,6 +139,7 @@ class Subscriptions:
 
         return res
 
+    
     def update(self, request: operations.UpdateSubscriptionRequest) -> operations.UpdateSubscriptionResponse:
         r"""Update an existing subscription
         Update an existing subscription by external ID

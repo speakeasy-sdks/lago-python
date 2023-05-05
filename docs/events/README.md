@@ -29,7 +29,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.EventEstimateFeesInput(
     event=shared.EventEstimateFeesInputEvent(
         code='code',
@@ -64,7 +63,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = shared.BatchEventInput(
     event=shared.BatchEventInputEvent(
@@ -106,7 +104,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.EventInput(
     event=shared.EventInputEvent(
         code='code',
@@ -143,7 +140,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindEventRequest(
     id='12345',

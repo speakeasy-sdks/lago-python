@@ -24,6 +24,7 @@ class BillableMetrics:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: shared.BillableMetricInput) -> operations.CreateBillableMetricResponse:
         r"""Create a new billable metric
         Create a new billable metric
@@ -65,6 +66,7 @@ class BillableMetrics:
 
         return res
 
+    
     def destroy(self, request: operations.DestroyBillableMetricRequest) -> operations.DestroyBillableMetricResponse:
         r"""Delete a billable metric
         Delete a billable metric
@@ -96,6 +98,7 @@ class BillableMetrics:
 
         return res
 
+    
     def find(self, request: operations.FindBillableMetricRequest) -> operations.FindBillableMetricResponse:
         r"""Find billable metric by code
         Return a single billable metric
@@ -127,6 +130,7 @@ class BillableMetrics:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllBillableMetricsRequest) -> operations.FindAllBillableMetricsResponse:
         r"""Find Billable metrics
         Find all billable metrics in certain organisation
@@ -155,6 +159,7 @@ class BillableMetrics:
 
         return res
 
+    
     def find_all_groups(self, request: operations.FindAllBillableMetricGroupsRequest) -> operations.FindAllBillableMetricGroupsResponse:
         r"""Find Billable metric groups
         Find all billable metric groups in certain organisation
@@ -183,6 +188,7 @@ class BillableMetrics:
 
         return res
 
+    
     def update(self, request: operations.UpdateBillableMetricRequest) -> operations.UpdateBillableMetricResponse:
         r"""Update an existing billable metric
         Update an existing billable metric by code

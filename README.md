@@ -29,12 +29,11 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindInvoiceRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
 
-res = s.invoices.find(req)
+res = s.invoices.void(req)
 
 if res.invoice is not None:
     # handle response
@@ -107,13 +106,13 @@ if res.invoice is not None:
 
 ### [invoices](docs/invoices/README.md)
 
-* [download](docs/invoices/README.md#download) - Download an existing invoice
-* [finalize](docs/invoices/README.md#finalize) - Finalize a draft invoice
-* [find](docs/invoices/README.md#find) - Find invoice by ID
-* [find_all](docs/invoices/README.md#find_all) - Find all invoices
+* [refresh](docs/invoices/README.md#refresh) - Refresh a draft invoice
 * [retry](docs/invoices/README.md#retry) - Retry invoice payment
-* [update](docs/invoices/README.md#update) - Update an existing invoice status
-* [void](docs/invoices/README.md#void) - Refresh a draft invoice
+* [void](docs/invoices/README.md#void) - Finalize a draft invoice
+* [void](docs/invoices/README.md#void) - Download an existing invoice
+* [void](docs/invoices/README.md#void) - Update an existing invoice status
+* [void](docs/invoices/README.md#void) - Find invoice by ID
+* [void](docs/invoices/README.md#void) - Find all invoices
 
 ### [organizations](docs/organizations/README.md)
 

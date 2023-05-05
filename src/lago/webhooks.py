@@ -24,6 +24,7 @@ class Webhooks:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def fetch_public_key(self) -> operations.FetchPublicKeyResponse:
         r"""Fetch webhook public key
         Webhook public key

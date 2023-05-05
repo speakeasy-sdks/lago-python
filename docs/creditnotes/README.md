@@ -29,7 +29,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.CreditNoteInput(
     credit_note=shared.CreditNoteInputCreditNote(
         credit_amount_cents=20,
@@ -80,7 +79,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DownloadCreditNoteRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',
 )
@@ -107,7 +105,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindCreditNoteRequest(
     id='12345',
 )
@@ -133,7 +130,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllCreditNotesRequest(
     external_customer_id='12345',
@@ -162,7 +158,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateCreditNoteRequest(
     credit_note_update_input=shared.CreditNoteUpdateInput(
@@ -194,7 +189,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.VoidCreditNoteRequest(
     id='1a901a90-1a90-1a90-1a90-1a901a901a90',

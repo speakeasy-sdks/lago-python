@@ -31,7 +31,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = shared.BillableMetricInput(
     billable_metric=shared.BillableMetricInputBillableMetric(
         aggregation_type=shared.BillableMetricInputBillableMetricAggregationTypeEnum.MAX_AGG,
@@ -79,7 +78,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.DestroyBillableMetricRequest(
     code='example_code',
 )
@@ -106,7 +104,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindBillableMetricRequest(
     code='example_code',
 )
@@ -132,7 +129,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.FindAllBillableMetricsRequest(
     page=2,
@@ -161,7 +157,6 @@ s = lago.Lago(
     ),
 )
 
-
 req = operations.FindAllBillableMetricGroupsRequest(
     code='example_code',
     page=2,
@@ -189,7 +184,6 @@ s = lago.Lago(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.UpdateBillableMetricRequest(
     billable_metric_input=shared.BillableMetricInput(

@@ -24,6 +24,7 @@ class Coupons:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def applied_coupons(self, request: operations.FindAllAppliedCouponsRequest) -> operations.FindAllAppliedCouponsResponse:
         r"""Find Applied Coupons
         Find all applied coupons
@@ -52,6 +53,7 @@ class Coupons:
 
         return res
 
+    
     def apply(self, request: shared.AppliedCouponInput) -> operations.ApplyCouponResponse:
         r"""Apply a coupon to a customer
         Apply a coupon to a customer
@@ -97,6 +99,7 @@ class Coupons:
 
         return res
 
+    
     def create(self, request: shared.CouponInput) -> operations.CreateCouponResponse:
         r"""Create a new coupon
         Create a new coupon
@@ -138,6 +141,7 @@ class Coupons:
 
         return res
 
+    
     def destroy(self, request: operations.DestroyCouponRequest) -> operations.DestroyCouponResponse:
         r"""Delete a coupon
         Delete a coupon
@@ -169,6 +173,7 @@ class Coupons:
 
         return res
 
+    
     def find(self, request: operations.FindCouponRequest) -> operations.FindCouponResponse:
         r"""Find coupon by code
         Return a single coupon
@@ -200,6 +205,7 @@ class Coupons:
 
         return res
 
+    
     def find_all(self, request: operations.FindAllCouponsRequest) -> operations.FindAllCouponsResponse:
         r"""Find Coupons
         Find all coupons in certain organisation
@@ -228,6 +234,7 @@ class Coupons:
 
         return res
 
+    
     def update(self, request: operations.UpdateCouponRequest) -> operations.UpdateCouponResponse:
         r"""Update an existing coupon
         Update an existing coupon by code

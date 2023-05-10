@@ -127,3 +127,11 @@ Based on:
 - Speakeasy CLI 1.29.1 (2.26.1) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [PyPI v1.8.1] https://pypi.org/project/lago-billing/1.8.1 - .
+
+## 2023-05-10 00:39:11
+### Changes
+Based on:
+- OpenAPI Doc 0.26.0-beta https://prod.speakeasyapi.dev/v1/apis/Lago/version/0.26.0-beta/schema/download
+- Speakeasy CLI 1.29.2 (2.26.2) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.8.2] https://pypi.org/project/lago-billing/1.8.2 - .

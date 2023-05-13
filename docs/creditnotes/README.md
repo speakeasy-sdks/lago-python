@@ -25,7 +25,7 @@ from lago.models import shared
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
@@ -75,7 +75,7 @@ from lago.models import operations
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
@@ -101,7 +101,7 @@ from lago.models import operations
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
@@ -127,7 +127,7 @@ from lago.models import operations
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
@@ -155,7 +155,7 @@ from lago.models import operations, shared
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
@@ -186,7 +186,7 @@ from lago.models import operations
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 

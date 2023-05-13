@@ -22,7 +22,7 @@ import lago
 
 s = lago.Lago(
     security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
